@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, CheckCircle, Shield, ChevronLeft, ChevronRight } from 'lucide-react';
+import healthCoverImg from '../assets/images/comprehensive_health_cover_image.JPG';
 import './Hero.css';
 
 const slides = [
@@ -30,7 +31,7 @@ const slides = [
         title: "Comprehensive",
         titleHighlight: "Medical Cover",
         description: "Secure the best healthcare for you and your family. Our AfyaImara plans offer wide hospital networks and fast claims.",
-        image: "https://images.unsplash.com/photo-1505751172876-fa1923c5c528?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80",
+        image: healthCoverImg,
         ctaText: "Get Health Cover",
         link: "/products?id=health"
     },
@@ -42,7 +43,7 @@ const slides = [
         description: "Safeguard your business assets and property from fire, theft, and operational risks with our customized commercial solutions.",
         image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80",
         ctaText: "Protect Business",
-        link: "//products?id=business"
+        link: "/products?id=business"
     }
 ];
 
