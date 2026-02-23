@@ -1,0 +1,122 @@
+/* Services.css */
+.services-section {
+    background-color: var(--bg-slate);
+}
+
+.section-header {
+    margin-bottom: var(--spacing-3xl);
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.subtitle {
+    color: var(--primary);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-size: 0.875rem;
+    display: block;
+    margin-bottom: var(--spacing-sm);
+}
+
+.title {
+    font-size: 3rem;
+    color: var(--bg-dark);
+    margin-bottom: var(--spacing-md);
+}
+
+.description {
+    color: var(--text-muted);
+    font-size: 1.125rem;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--spacing-xl);
+}
+
+.service-card {
+    background: var(--bg-white);
+    padding: var(--spacing-2xl);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+    transition: var(--transition);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.service-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-xl);
+    border-color: var(--primary-light);
+}
+
+.icon-wrapper {
+    width: 64px;
+    height: 64px;
+    background: var(--bg-slate);
+    border-radius: var(--radius-md);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary);
+    margin-bottom: var(--spacing-lg);
+    transition: var(--transition);
+}
+
+.service-card:hover .icon-wrapper {
+    background: var(--primary);
+    color: var(--text-white);
+    transform: scale(1.1);
+}
+
+.service-title {
+    font-size: 1.5rem;
+    color: var(--bg-dark);
+    margin-bottom: var(--spacing-sm);
+    font-weight: 700;
+}
+
+.service-description {
+    color: var(--text-muted);
+    margin-bottom: var(--spacing-lg);
+    font-size: 1rem;
+    line-height: 1.7;
+    flex-grow: 1;
+}
+
+.learn-more {
+    color: var(--secondary);
+    font-weight: 700;
+    font-size: 1rem;
+    display: inline-flex;
+    align-items: center;
+    gap: var(--spacing-xs);
+    transition: var(--transition);
+}
+
+.learn-more:hover {
+    gap: var(--spacing-sm);
+    color: var(--secondary-dark);
+}
+
+@media (max-width: 1024px) {
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--spacing-lg);
+    }
+}
+
+@media (max-width: 768px) {
+    .title {
+        font-size: 2.5rem;
+    }
+
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+}

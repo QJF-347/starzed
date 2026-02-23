@@ -1,0 +1,125 @@
+/* Register.css */
+.register-container {
+    min-height: calc(100vh - 80px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, var(--bg-slate) 0%, #e2e8f0 100%);
+    padding: var(--spacing-2xl) var(--spacing-md);
+    margin-top: 80px;
+}
+
+.register-box {
+    background: var(--bg-white);
+    width: 100%;
+    max-width: 480px;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-xl);
+    padding: var(--spacing-2xl);
+    animation: slideUpFade 0.5s ease-out;
+}
+
+.register-header {
+    text-align: center;
+    margin-bottom: var(--spacing-2xl);
+    position: relative;
+}
+
+.register-header .back-link {
+    position: absolute;
+    top: -10px;
+    left: 0;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.register-header .back-link:hover {
+    color: var(--primary);
+    transform: translateX(-4px);
+}
+
+.register-header h2 {
+    font-size: 1.75rem;
+    font-weight: 800;
+    color: var(--bg-dark);
+    margin-bottom: var(--spacing-xs);
+    margin-top: 1rem;
+}
+
+.register-header p {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+}
+
+.register-error {
+    background: #fee2e2;
+    color: #b91c1c;
+    padding: var(--spacing-sm) var(--spacing-md);
+    border-radius: var(--radius-md);
+    font-size: 0.875rem;
+    margin-bottom: var(--spacing-lg);
+    text-align: center;
+    border: 1px solid #f87171;
+}
+
+.register-form .input-group {
+    margin-bottom: var(--spacing-md);
+}
+
+.register-button {
+    width: 100%;
+    background: var(--primary);
+    color: var(--text-white);
+    border: none;
+    padding: 0.875rem;
+    border-radius: var(--radius-md);
+    font-size: 1rem;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+    transition: var(--transition);
+    box-shadow: 0 4px 6px -1px rgba(107, 33, 168, 0.2);
+    margin-top: var(--spacing-lg);
+}
+
+.register-button:hover:not(:disabled) {
+    background: var(--primary-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 15px -3px rgba(107, 33, 168, 0.3);
+}
+
+.register-button:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+
+.login-prompt {
+    margin-top: var(--spacing-xl);
+    text-align: center;
+    font-size: 0.9rem;
+    color: var(--text-muted);
+}
+
+.login-prompt a {
+    color: var(--primary);
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.login-prompt a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 480px) {
+    .register-box {
+        padding: var(--spacing-xl);
+    }
+}

@@ -1,0 +1,96 @@
+/* ReadySection.css */
+.ready-section {
+    background: var(--bg-dark);
+    color: var(--text-white);
+}
+
+.ready-section .title {
+    color: var(--text-white);
+    font-size: 3rem;
+}
+
+.text-white-opacity {
+    color: var(--text-light);
+    max-width: 600px;
+    margin: 0 auto var(--spacing-3xl) auto;
+}
+
+.ready-grid {
+    display: flex;
+    justify-content: center;
+    gap: var(--spacing-xl);
+    flex-wrap: wrap;
+}
+
+.ready-card {
+    background: var(--bg-white);
+    color: var(--text-main);
+    padding: var(--spacing-2xl);
+    border-radius: var(--radius-lg);
+    flex: 1;
+    min-width: 300px;
+    max-width: 400px;
+    text-align: left;
+    transition: var(--transition);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.ready-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-xl);
+}
+
+.ready-card.highlight {
+    background: var(--primary);
+    color: var(--text-white);
+    transform: scale(1.05);
+    box-shadow: var(--shadow-xl);
+    border: none;
+}
+
+.ready-card.highlight:hover {
+    transform: scale(1.05) translateY(-8px);
+}
+
+.ready-icon {
+    margin-bottom: var(--spacing-lg);
+    color: var(--primary);
+}
+
+.ready-card.highlight .ready-icon {
+    color: var(--text-white);
+}
+
+.ready-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: var(--spacing-sm);
+    font-weight: 700;
+}
+
+.ready-card p {
+    font-size: 1rem;
+    margin-bottom: var(--spacing-xl);
+    line-height: 1.6;
+    color: var(--text-muted);
+}
+
+.ready-card.highlight p {
+    color: var(--text-light);
+}
+
+.ready-link {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--spacing-xs);
+    font-weight: 700;
+    color: var(--primary);
+    transition: var(--transition);
+}
+
+.ready-link:hover {
+    gap: var(--spacing-sm);
+}
+
+.ready-card.highlight .ready-link {
+    color: var(--text-white);
+}
