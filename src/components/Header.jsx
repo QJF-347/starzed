@@ -66,6 +66,15 @@ const Header = ({ onOpenQuote, onOpenMessage }) => {
                             <Link to="/contact" className="nav__link">Contact</Link>
                         </nav>
 
+                        {/* Mobile Overlay */}
+                        {menuOpen && (
+                            <div
+                                className="nav-overlay"
+                                onClick={() => setMenuOpen(false)}
+                                aria-hidden="true"
+                            />
+                        )}
+
                         {/* CTA Button */}
                         <div className="header-actions">
                             <Link to="/login" className="login-btn">

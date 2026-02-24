@@ -406,7 +406,7 @@
         position: fixed;
         top: 0;
         left: 0;
-        width: 100%;
+        width: 75%;
         height: 100vh;
         background: var(--bg-white);
         flex-direction: column;
@@ -414,8 +414,10 @@
         padding: 5rem var(--spacing-xl) var(--spacing-xl);
         margin: 0;
         transform: translateX(-100%);
-        transition: var(--transition);
+        transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
         overflow-y: auto;
+        box-shadow: 10px 0 30px rgba(0, 0, 0, 0.1);
+        z-index: 1002;
     }
 
     .nav--open {
@@ -474,7 +476,29 @@
     .menu-toggle {
         display: block;
         position: relative;
+        z-index: 1003;
+    }
+
+    .nav-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background: rgba(0, 0, 0, 0.5);
+        backdrop-filter: blur(4px);
         z-index: 1001;
+        animation: fadeIn 0.3s ease forwards;
+    }
+
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+        }
+
+        to {
+            opacity: 1;
+        }
     }
 
     .cta-btn {
