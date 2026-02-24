@@ -13,6 +13,7 @@ import ProductDetail from './pages/ProductDetail';
 import Blogs from './pages/Blogs';
 import Login from './pages/Login';
 import Register from './pages/Register';
+import GlobalPartnerships from './pages/GlobalPartnerships';
 import QuoteModal from './components/QuoteModal';
 import MessageModal from './components/MessageModal';
 import './index.css';
@@ -55,6 +56,7 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
           <Route path="/products/:productId" element={<ProductDetail />} />
+          <Route path="/global-partnerships" element={<GlobalPartnerships />} />
         </Routes>
       </main>
       <Footer onOpenMessage={() => openMessageModal()} />

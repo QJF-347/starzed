@@ -1,6 +1,7 @@
 import React from 'react';
 import Hero from '../components/Hero';
 import Statistics from '../components/Statistics';
+import InsurancePartners from '../components/InsurancePartners';
 import Services from '../components/Services';
 import Partners from '../components/Partners';
 import ReadySection from '../components/ReadySection';
@@ -12,6 +13,7 @@ const Home = ({ onOpenQuote }) => {
         <>
             <Hero onOpenQuote={onOpenQuote} />
             <Statistics />
+            <InsurancePartners />
             <Services />
             <Partners />
             <ReadySection onOpenQuote={onOpenQuote} />

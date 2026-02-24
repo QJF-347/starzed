@@ -63,6 +63,7 @@ const Header = ({ onOpenQuote, onOpenMessage }) => {
                             <Link to="/claims" className="nav__link">Claims</Link>
                             <Link to="/blogs" className="nav__link">Blogs</Link>
                             <Link to="/careers" className="nav__link">Careers</Link>
+                            <Link to="/global-partnerships" className="nav__link">Global Partnerships</Link>
                             <Link to="/contact" className="nav__link">Contact</Link>
                         </nav>
 
