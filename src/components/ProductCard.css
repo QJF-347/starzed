@@ -169,7 +169,7 @@
 
 .product-card.compact .product-card__description {
     font-size: 0.95rem;
-    margin-bottom: 4px; /* Further reduced */
+    margin-bottom: 4px; 
     -webkit-line-clamp: 2;
     line-height: 1.2; /* Reduced */
 }
