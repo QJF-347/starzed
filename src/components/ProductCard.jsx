@@ -1,10 +1,14 @@
 import React from 'react';
 import { ArrowRight } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 import './ProductCard.css';
 
 const ProductCard = ({ product }) => {
+    const navigate = useNavigate();
+
     const handleClick = () => {
-        window.location.href = `/products/${product.id}`;
+        // Navigate to products page with product ID as query parameter
+        navigate(`/products?id=${product.id}`);
     };
 
     const handleImageError = (e) => {
