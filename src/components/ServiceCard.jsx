@@ -1,5 +1,6 @@
 import React from 'react';
 import { Car, Heart, Home, Shield, Briefcase, Trees, Plane, Users, FileText, Smartphone, ArrowRight } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 import './ServiceCard.css';
 
 const iconMap = {
@@ -17,8 +18,11 @@ const iconMap = {
 };
 
 const ServiceCard = ({ service }) => {
+    const navigate = useNavigate();
+
     const handleClick = () => {
-        window.location.href = service.link;
+        // Use navigate instead of window.location.href for better routing
+        navigate(service.link);
     };
 
     const IconComponent = iconMap[service.icon] || iconMap.Shield;
