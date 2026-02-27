@@ -17,33 +17,83 @@ const slides = [
     },
     {
         id: 2,
-        badge: "Drive with Peace",
-        title: "Premium Motor",
-        titleHighlight: "Vehicle Insurance",
-        description: "From private cars to commercial fleets, our motor insurance covers you against theft, accidents, and third-party liabilities.",
-        image: "https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80",
-        ctaText: "Insure Your Car",
-        link: "/products?id=motor"
+        badge: "Health Protection",
+        title: "Comprehensive",
+        titleHighlight: "Medical Insurance",
+        description: "Secure the best healthcare for you and your family with our wide range of medical insurance plans from individual to executive coverage.",
+        image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=800&q=80",
+        ctaText: "Get Health Cover",
+        link: "/products?category=Medical Insurance"
     },
     {
         id: 3,
-        badge: "Your Health First",
-        title: "Comprehensive",
-        titleHighlight: "Medical Cover",
-        description: "Secure the best healthcare for you and your family. Our AfyaImara plans offer wide hospital networks and fast claims.",
-        image: healthCoverImg,
-        ctaText: "Get Health Cover",
-        link: "/products?id=health"
+        badge: "Life Security",
+        title: "Life & Personal",
+        titleHighlight: "Insurance",
+        description: "Protect your loved ones' future with our comprehensive life assurance, pension plans, and investment products.",
+        image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&q=80",
+        ctaText: "Secure Future",
+        link: "/products?category=Life & Personal Insurance"
     },
     {
         id: 4,
-        badge: "Secure Your Future",
-        title: "Business and Property ",
+        badge: "Property Safety",
+        title: "Complete Property",
         titleHighlight: "Protection",
-        description: "Safeguard your business assets and property from fire, theft, and operational risks with our customized commercial solutions.",
-        image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80",
+        description: "Safeguard your home, business, and industrial property against fire, theft, and other perils with comprehensive coverage.",
+        image: "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=800&q=80",
+        ctaText: "Protect Property",
+        link: "/products?category=Property Insurance"
+    },
+    {
+        id: 5,
+        badge: "Liability Coverage",
+        title: "Professional & Public",
+        titleHighlight: "Liability Insurance",
+        description: "Protect your business and professional practice against negligence claims, public liability, and specialized risks.",
+        image: "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=800&q=80",
+        ctaText: "Get Liability Cover",
+        link: "/products?category=Liability Insurance"
+    },
+    {
+        id: 6,
+        badge: "Vehicle Protection",
+        title: "Comprehensive Motor",
+        titleHighlight: "Vehicle Insurance",
+        description: "From private cars to commercial fleets and motorcycles, our motor insurance covers all your vehicle needs comprehensively.",
+        image: "https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?w=800&q=80",
+        ctaText: "Insure Your Vehicle",
+        link: "/products?category=Motor Insurance"
+    },
+    {
+        id: 7,
+        badge: "Business Security",
+        title: "Business & Financial",
+        titleHighlight: "Insurance Solutions",
+        description: "Specialized insurance for businesses including contractors, bid bonds, school coverage, and comprehensive business protection.",
+        image: "https://images.unsplash.com/photo-1491336477066-31156b5e4f35?w=800&q=80",
         ctaText: "Protect Business",
-        link: "/products?id=business"
+        link: "/products?category=Business & Financial Insurance"
+    },
+    {
+        id: 8,
+        badge: "Agricultural Protection",
+        title: "Complete Agriculture",
+        titleHighlight: "Insurance",
+        description: "Protect your crops, livestock, and agricultural investments against weather, disease, theft, and other farming risks.",
+        image: "https://images.unsplash.com/photo-1625246333195-78d9c38ad449?w=800&q=80",
+        ctaText: "Protect Farm",
+        link: "/products?category=Agriculture insurance"
+    },
+    {
+        id: 9,
+        badge: "Travel Safety",
+        title: "Comprehensive",
+        titleHighlight: "Travel Insurance",
+        description: "Travel with confidence covering single trips, annual multi-trip, student travel, and specialized corporate travel plans.",
+        image: "https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=800&q=80",
+        ctaText: "Get Travel Cover",
+        link: "/products?category=Travel insurance"
     }
 ];
 

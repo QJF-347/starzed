@@ -1,6 +1,7 @@
 /* CoreValues.css */
 .values-section {
-    background: var(--bg-slate);
+    background: var(--bg-white);
+    padding-top: 0;
 }
 
 .values-grid {
@@ -12,28 +13,29 @@
 }
 
 .value-card {
-    background: var(--bg-white);
+    background: var(--bg-slate);
     padding: var(--spacing-xl) var(--spacing-lg);
     border-radius: var(--radius-lg);
     width: 220px;
     text-align: center;
-    box-shadow: var(--shadow-md);
+    box-shadow: none;
     transition: var(--transition);
-    border-top: 4px solid transparent;
+    border: 1px solid transparent;
 }
 
 .value-card:hover {
-    transform: translateY(-8px);
-    box-shadow: var(--shadow-xl);
-    border-top-color: var(--primary);
+    transform: translateY(-5px);
+    background: var(--bg-white);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--primary-light);
 }
 
 .value-letter {
-    font-size: 2rem;
+    font-size: 2.5rem;
     font-weight: 800;
-    color: rgba(88, 28, 135, 0.08);
-    /* Darker purple tint */
-    margin-bottom: -0.5rem;
+    color: var(--primary);
+    opacity: 0.1;
+    margin-bottom: -0.8rem;
     line-height: 1;
 }
 
@@ -69,15 +71,14 @@
 }
 
 .mv-card.mission {
-    background: var(--bg-white);
-    border: 1px solid var(--bg-slate);
-    box-shadow: var(--shadow-lg);
+    background: var(--bg-slate);
+    border: 1px solid rgba(0, 0, 0, 0.05);
 }
 
 .mv-card.vision {
-    background: var(--primary);
+    background: linear-gradient(135deg, var(--primary), var(--primary-dark));
     color: var(--text-white);
-    box-shadow: var(--shadow-xl);
+    box-shadow: var(--shadow-lg);
 }
 
 .mv-card h3 {

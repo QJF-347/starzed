@@ -43,3 +43,4 @@ export const blogs = [
 
 export const getFeaturedBlog = () => blogs[0];
 export const getRecentBlogs = () => blogs.slice(1);
+export const getBlogById = (id) => blogs.find(blog => blog.id === id);

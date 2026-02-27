@@ -11,6 +11,7 @@ import About from './pages/About';
 import Services from './pages/Services';
 import ProductDetail from './pages/ProductDetail';
 import Blogs from './pages/Blogs';
+import BlogPost from './pages/BlogPost';
 import Login from './pages/Login';
 import Register from './pages/Register';
 import GlobalPartnerships from './pages/GlobalPartnerships';
@@ -53,6 +54,7 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/services" element={<Services />} />
           <Route path="/blogs" element={<Blogs />} />
+          <Route path="/blogs/:blogId" element={<BlogPost />} />
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
           <Route path="/products/:productId" element={<ProductDetail />} />

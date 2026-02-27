@@ -1,16 +1,22 @@
 /* Partners.css */
 .partners-section {
     background: var(--bg-white);
+    padding: var(--spacing-xl) 0;
 }
 
 .features-wrapper {
     display: flex;
     align-items: center;
-    gap: var(--spacing-3xl);
+    gap: var(--spacing-2xl);
+    background: white;
+    padding: var(--spacing-lg);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-lg);
+    border: 1px solid rgba(0, 0, 0, 0.05);
 }
 
 .features-content {
-    flex: 1;
+    flex: 1.2;
 }
 
 .features-image {
@@ -18,7 +24,16 @@
     position: relative;
     border-radius: var(--radius-lg);
     overflow: hidden;
-    box-shadow: var(--shadow-xl);
+    /* Removed box-shadow here as it's now on the wrapper */
+}
+
+.map-placeholder {
+    background: var(--bg-slate);
+    padding: var(--spacing-md);
+    border-radius: var(--radius-md);
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .map-placeholder img {
@@ -26,16 +41,17 @@
     height: auto;
     display: block;
     transition: var(--transition);
+    filter: drop-shadow(0 10px 15px rgba(0, 0, 0, 0.1));
 }
 
 .features-image:hover img {
-    transform: scale(1.05);
+    transform: scale(1.02);
 }
 
 .partners-list {
     margin-top: var(--spacing-xl);
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     gap: var(--spacing-md);
 }
 

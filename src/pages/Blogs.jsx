@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { Calendar, Clock, User, ArrowRight } from 'lucide-react';
 import { getFeaturedBlog, getRecentBlogs } from '../data/blogs';
 import './Blogs.css';
@@ -33,9 +34,9 @@ const Blogs = () => {
                             </div>
                             <h3 className="featured-title">{featuredBlog.title}</h3>
                             <p className="featured-excerpt">{featuredBlog.excerpt}</p>
-                            <button className="read-more-btn">
+                            <Link to={`/blogs/${featuredBlog.id}`} className="read-more-btn">
                                 Read Full Article <ArrowRight size={16} />
-                            </button>
+                            </Link>
                         </div>
                     </div>
                 )}
@@ -57,9 +58,9 @@ const Blogs = () => {
                                 <p className="blog-excerpt">{blog.excerpt}</p>
                                 <div className="blog-footer">
                                     <span className="blog-author"><User size={14} /> {blog.author}</span>
-                                    <button className="read-more-link" aria-label={`Read more about ${blog.title}`}>
+                                    <Link to={`/blogs/${blog.id}`} className="read-more-link" aria-label={`Read more about ${blog.title}`}>
                                         Read More <ArrowRight size={16} />
-                                    </button>
+                                    </Link>
                                 </div>
                             </div>
                         </article>

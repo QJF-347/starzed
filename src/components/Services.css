@@ -1,11 +1,12 @@
 /* Services.css */
 .services-section {
     background-color: var(--bg-slate);
+    padding-top: var(--spacing-xl);
 }
 
 .section-header {
     margin-bottom: var(--spacing-3xl);
-    max-width: 800px;
+    max-width: 1400px;
     margin-left: auto;
     margin-right: auto;
 }

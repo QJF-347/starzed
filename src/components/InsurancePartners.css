@@ -1,6 +1,6 @@
 .partners-carousel {
-    padding: var(--spacing-2xl) 0;
-    background: #f8fafc;
+    padding: var(--spacing-lg) 0;
+    background: #eaebfd;
     overflow: hidden;
     border-top: 1px solid var(--bg-slate);
     border-bottom: 1px solid var(--bg-slate);
@@ -35,7 +35,7 @@
 
 .partner-card {
     flex: 0 0 200px;
-    height: 100px;
+    height: 80px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -44,13 +44,9 @@
     padding: var(--spacing-md);
     box-shadow: var(--shadow-sm);
     transition: var(--transition);
-    filter: grayscale(1);
-    opacity: 0.7;
 }
 
 .partner-card:hover {
-    filter: grayscale(0);
-    opacity: 1;
     transform: translateY(-5px);
     box-shadow: var(--shadow-md);
 }

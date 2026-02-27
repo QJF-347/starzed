@@ -1,5 +1,6 @@
 import React from 'react';
 import './Partners.css';
+import coverageInKenya from '../assets/images/coverage_in_kenya_image.png';
 
 const Partners = () => {
     return (
@@ -21,7 +22,7 @@ const Partners = () => {
                     <div className="features-image">
                         {/* Placeholder for Map Graphic */}
                         <div className="map-placeholder">
-                            <img src="https://images.unsplash.com/photo-1524661135-423995f22d0b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1774&q=80" alt="Kenya Map Representation" />
+                            <img src={coverageInKenya} alt="Coverage in Kenya" />
                             <div className="map-overlay">
                                 <span>Nationwide Presence</span>
                             </div>

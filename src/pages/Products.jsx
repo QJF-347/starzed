@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useSearchParams, useNavigate } from 'react-router-dom';
-import { ChevronRight } from 'lucide-react';
+import ProductCard from '../components/ProductCard';
 import './Products.css';
 
 import { getProductsByCategory, products } from '../data/products';
@@ -10,9 +10,12 @@ const Products = () => {
     const categoryQuery = searchParams.get('category');
     const navigate = useNavigate();
 
+    // Decode URL parameter to handle special characters like &
+    const decodedCategory = categoryQuery ? decodeURIComponent(categoryQuery) : null;
+
     // Filter products based on category if it exists
-    const displayProducts = categoryQuery
-        ? getProductsByCategory(categoryQuery)
+    const displayProducts = decodedCategory
+        ? getProductsByCategory(decodedCategory)
         : products;
 
     return (
@@ -21,7 +24,7 @@ const Products = () => {
                 <div className="section-header">
                     <span className="section-label">Our Services</span>
                     <h2 className="section-title">
-                        {categoryQuery ? `${categoryQuery} Products` : 'Insurance Products & Services'}
+                        {decodedCategory ? `${decodedCategory} Products` : 'Insurance Products & Services'}
                     </h2>
                     <p className="section-description">
                         We provide comprehensive insurance solutions backed by 30+ years of experience.
@@ -30,37 +33,7 @@ const Products = () => {
 
                 <div className="products-grid">
                     {displayProducts.length > 0 ? displayProducts.map((product, index) => (
-                        <article key={product.id || index} className="product-card">
-                            <div className="card-header">
-                                <div className="card-icon">
-                                    {product.icon}
-                                </div>
-                                <h3 className="card-title">{product.title}</h3>
-                            </div>
-
-                            <p className="card-description">
-                                {product.shortDescription}
-                            </p>
-
-                            <div className="card-features">
-                                <ul className="features-list">
-                                    {product.features.slice(0, 3).map((feature, featureIndex) => (
-                                        <li key={featureIndex} className="feature-item">
-                                            <ChevronRight size={14} />
-                                            <span>{feature.split(':')[0]}</span>
-                                        </li>
-                                    ))}
-                                </ul>
-                            </div>
-
-                            <button
-                                className="card-button"
-                                onClick={() => navigate(`/products/${product.id}`)}
-                            >
-                                View Details
-                                <ChevronRight size={16} />
-                            </button>
-                        </article>
+                        <ProductCard key={product.id || index} product={product} />
                     )) : (
                         <div className="no-products" style={{ textAlign: 'center', gridColumn: '1 / -1', padding: '40px' }}>
                             <p style={{ marginBottom: '20px', fontSize: '1.2rem', color: 'var(--text-muted)' }}>No products found for this category.</p>
@@ -74,7 +47,7 @@ const Products = () => {
                         <p>All insurance products are subject to policy terms and conditions. Contact our advisors for detailed information.</p>
                     </div>
                     {/* Show View All if filtered */}
-                    {categoryQuery && (
+                    {decodedCategory && (
                         <div className="action-buttons" style={{ marginTop: '20px' }}>
                             <button className="login-btn" onClick={() => navigate('/products')}>View All Products</button>
                         </div>

@@ -1,503 +1,695 @@
 import React from 'react';
-import { Car, Heart, Users, Building, Briefcase, Shield, Home, Key, PiggyBank, Briefcase as BriefcaseIcon, GraduationCap, Anchor, HardHat } from 'lucide-react';
+import { Heart, Users, Building, Briefcase, Shield, Home, Key, PiggyBank, GraduationCap, Anchor, Car, Truck, Package, AlertTriangle, FileText, Plane, Trees, Dog, TrendingUp, Factory, UserCheck, HandCoins, Sprout } from 'lucide-react';
 
 export const products = [
-    // --- Motor Insurance ---
-    {
-        id: 'motor-vehicle-insurance',
-        title: 'Motor Vehicle Insurance',
-        category: 'Motor Insurance',
-        shortDescription: 'Comprehensive coverage for your vehicle against accidents, theft, and liabilities.',
-        description: 'Our Motor Vehicle Insurance offering provides complete peace of mind on the road. Whether you own a private car, a commercial vehicle, or a fleet, we have tailored solutions to meet your specific needs.',
-        icon: <Car size={48} />,
-        image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUpczvpD_qOYevwqnH_u1M27jsCq02ff809A&s',
-        features: [
-            'Comprehensive Cover: Protection against accidental damage, fire, and theft.',
-            'Third Party Liability: Coverage for bodily injury and property damage to third parties.',
-            'Passenger Liability: Cover for passengers in your vehicle.',
-            'Emergency Medical Expenses: Coverage for medical expenses following an accident.'
-        ]
-    },
-    {
-        id: 'motor-private',
-        title: 'Motor Private',
-        category: 'Motor Insurance',
-        shortDescription: 'Insurance designed specifically for private vehicle owners.',
-        description: 'Motor Private insurance is designed for individuals who use their vehicles for social, domestic, and pleasure purposes. It offers extensive protection for your personal car.',
-        icon: <Car size={48} />,
-        image: 'https://images.unsplash.com/photo-1494976388531-d1058494cdd8?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80',
-        features: [
-            'Loss or Damage: Protection against fire, theft, and accidental damage.',
-            'Third Party Risks: Legal liability for death, injury, or property damage.',
-            'Windscreen Cover: Replacement or repair of damaged windscreens.',
-            'Entertainment Unit Cover: Protection for your car radio and music system.'
-        ]
-    },
-    {
-        id: 'motor-commercial',
-        title: 'Motor Commercial',
-        category: 'Motor Insurance',
-        shortDescription: 'Coverage for vehicles used for business and commercial purposes.',
-        description: 'Keep your business moving with our Motor Commercial insurance. This policy covers vehicles used for transporting goods or passengers for hire or reward.',
-        icon: <Briefcase size={48} />,
-        image: 'https://images.unsplash.com/photo-1549461129-3ae8e658393c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80',
-        features: [
-            'Own Damage: Cover for repair costs due to accidents.',
-            'Third Party Liability: Mandatory coverage for commercial operations.',
-            'Passenger Legal Liability: Protection against claims from passengers.',
-            'Anti-Theft Device: Discounts for installed tracking devices.'
-        ]
-    },
-    {
-        id: 'motor-cycle',
-        title: 'Motor Cycle',
-        category: 'Motor Insurance',
-        shortDescription: 'Specialized insurance for motorcycles and bodabodas.',
-        description: 'Affordable and reliable coverage for motorcycle owners. Whether for personal use or business, we ensure you are protected on every ride.',
-        icon: <Car size={48} />,
-        image: 'https://images.unsplash.com/photo-1558981403-c5f91ed9c251?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80',
-        features: [
-            'Third Party Only: Basic mandatory cover.',
-            'Comprehensive: Full protection including theft and fire.',
-            'Rider Personal Accident: Coverage for the rider in case of injury.'
-        ]
-    },
-    {
-        id: 'riot-strike-civil-commotion',
-        title: 'Riot/Strike/Civil Commotion',
-        category: 'Motor Insurance',
-        shortDescription: 'Additional protection against political risks and civil unrest.',
-        description: 'Standard policies often exclude riots and strikes. This extension ensures your vehicle is protected during times of civil instability or political unrest.',
-        icon: <Shield size={48} />,
-        image: 'https://images.unsplash.com/photo-1517048676732-d65bc937f952?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80',
-        features: [
-            'Riot Coverage: Damage caused during riots.',
-            'Strike Coverage: Damage caused by striking workers.',
-            'Civil Commotion: Protection during public disturbances.'
-        ]
-    },
-
-    // --- Accidental & Medical Insurance ---
-    {
-        id: 'life-assurance',
-        title: 'Life Assurance',
-        category: 'Accidental & Medical Insurance',
-        shortDescription: 'Secure your family\'s future with our life assurance plans.',
-        description: 'Life Assurance provides a financial safety net for your loved ones in the event of your passing. It ensures that your family can maintain their standard of living and meet financial obligations.',
-        icon: <Users size={48} />,
-        image: 'https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80',
-        features: [
-            'Term Life: Affordable protection for a specific period.',
-            'Whole Life: Permanent coverage with a savings component.',
-            'Beneficiary Support: Quick payout to your nominated beneficiaries.'
-        ]
-    },
-    {
-        id: 'personal-accident',
-        title: 'Personal Accident',
-        category: 'Accidental & Medical Insurance',
-        shortDescription: 'Financial protection against accidental injury or death.',
-        description: 'Personal Accident insurance provides compensation in the event of injuries, disability, or death resulting from an accident. It acts as a financial safety net for you and your beneficiaries.',
-        icon: <Heart size={48} />,
-        image: 'https://images.unsplash.com/photo-1505751172876-fa1923c5c528?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80',
-        features: [
-            'Accidental Death: Lump sum payment to beneficiaries.',
-            'Permanent Total Disability: Compensation for life-long disability.',
-            'Medical Expenses Reimbursement: Coverage for accident-related medical bills.'
-        ]
-    },
-    {
-        id: 'medical-insurance-cover',
-        title: 'Medical Insurance Cover',
-        category: 'Accidental & Medical Insurance',
-        shortDescription: 'Comprehensive health coverage for you and your family.',
-        description: 'Health is wealth. Our Medical Insurance Cover ensures you have access to quality healthcare without the financial burden. We cover inpatient and outpatient services.',
-        icon: <Heart size={48} />,
-        image: 'https://images.unsplash.com/photo-1576091160550-217359f4ecf8?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80',
-        features: [
-            'Inpatient Cover: Hospitalization fees, surgery, and doctor\'s fees.',
-            'Outpatient Cover: Consultation, laboratories, and pharmacy.',
-            'Maternity Cover: Pre-natal, delivery, and post-natal care.'
-        ]
-    },
-    {
-        id: 'salamasure-uap',
-        title: 'Salamasure – UAP',
-        category: 'Accidental & Medical Insurance',
-        shortDescription: 'A comprehensive medical and personal accident solution by UAP.',
-        description: 'Salamasure offers a blend of medical and personal accident coverage, ensuring you are protected against unforeseen health and accident-related expenses.',
-        icon: <Shield size={48} />,
-        image: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80',
-        features: [
-            'Combined Coverage: Medical and personal accident benefits.',
-            'Flexible Limits: Choose a plan that fits your budget.',
-            'Wide Provider Network: Access to leading hospitals.'
-        ]
-    },
-    {
-        id: 'uap-afyaimara-family-cover',
-        title: 'UAP AfyaImara Family Cover',
-        category: 'Accidental & Medical Insurance',
-        shortDescription: 'Premium family health cover for complete peace of mind.',
-        description: 'AfyaImara Family Cover is designed to take care of your family’s health needs. It offers extensive inpatient and outpatient benefits with a wide network of providers.',
-        icon: <Users size={48} />,
-        image: 'https://images.unsplash.com/photo-1536640712247-3a97c6c475fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80',
-        features: [
-            'Family Shared Limit: Optimize cover for the whole family.',
-            'Chronic Disease Management: Coverage for managing chronic conditions.',
-            'Annual Health Checkups: Preventive care included.'
-        ]
-    },
-    {
-        id: 'group-life-cover',
-        title: 'Group Life Cover',
-        category: 'Accidental & Medical Insurance',
-        shortDescription: 'Life insurance for employees or groups.',
-        description: 'A policy designed for employers to provide life insurance coverage to their employees. It pays out a lump sum to beneficiaries in case of death in service.',
-        icon: <BriefcaseIcon size={48} />,
-        image: 'https://images.unsplash.com/photo-1521737711867-e3b97375f902?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80',
-        features: [
-            'Death in Service Benefit: Financial support for employee families.',
-            'Critical Illness Rider: Optional add-on for critical illnesses.',
-            'Funeral Expense Benefit: Assistance with funeral costs.'
-        ]
-    },
+    // --- Medical Insurance ---
     {
         id: 'group-medical',
         title: 'Group Medical',
-        category: 'Accidental & Medical Insurance',
-        shortDescription: 'Health insurance solution for registered groups and companies.',
-        description: 'Ensure your team is healthy and productive with our Group Medical schemes. Tailored for companies, chamas, and associations.',
+        category: 'Medical Insurance',
+        shortDescription: 'Comprehensive health cover for employees working in an organization',
+        description: 'Group Medical insurance provides comprehensive healthcare coverage for employees, ensuring access to quality medical services and promoting workplace wellness.',
         icon: <Users size={48} />,
-        image: 'https://images.unsplash.com/photo-1556761175-5973dc0f32e7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80',
+        image: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=800&q=80',
         features: [
-            'Customizable Limits: Tailor benefits to your budget.',
-            'Inpatient & Outpatient: Comprehensive healthcare access.',
-            'Maternity & Optical: Optional benefits available.'
+            'Comprehensive Health Coverage: Full medical benefits for employees',
+            'Corporate Wellness: Health and wellness programs included',
+            'Flexible Plans: Customizable coverage options',
+            'Network Access: Wide hospital and clinic network'
         ]
     },
     {
-        id: 'group-personal-accident',
-        title: 'Group Personal Accident',
-        category: 'Accidental & Medical Insurance',
-        shortDescription: 'Accident coverage for groups and employees.',
-        description: 'Provides compensation to a group of people (e.g., employees) in the event of accidental injury, disability, or death. Ideally suited for companies.',
-        icon: <Shield size={48} />,
-        image: 'https://images.unsplash.com/photo-1529107386315-e1a2ed48a620?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80',
+        id: 'executive-medical-scheme',
+        title: 'Executive Medical Scheme',
+        category: 'Medical Insurance',
+        shortDescription: 'This cover is tailored for executives, senior officers, politicians, Business people & professionals',
+        description: 'Executive Medical Scheme offers premium healthcare coverage designed for high-level executives and professionals with enhanced benefits and personalized service.',
+        icon: <Briefcase size={48} />,
+        image: 'https://images.unsplash.com/photo-1550355291-bbee04a92027?w=800&q=80',
         features: [
-            '24-hour Coverage: Protection on and off the job.',
-            'Temporary Total Disability: Weekly income replacement.',
-            'Medical Expenses: Coverage for accident-related treatment.'
+            'Premium Coverage: Enhanced medical benefits for executives',
+            'Personalized Service: Dedicated healthcare support',
+            'Global Coverage: International medical assistance',
+            'VIP Treatment: Priority access to healthcare facilities'
+        ]
+    },
+    {
+        id: 'family-health-cover',
+        title: 'Family Health Cover',
+        category: 'Medical Insurance',
+        shortDescription: 'Family-oriented health insurance with wide benefits for cater for family health needs',
+        description: 'Family Health Cover provides comprehensive medical protection for your entire family with extensive benefits and affordable premiums.',
+        icon: <Heart size={48} />,
+        image: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=800&q=80',
+        features: [
+            'Family Coverage: All family members included',
+            'Wide Benefits: Comprehensive medical services',
+            'Affordable Premiums: Cost-effective family protection',
+            'Preventive Care: Regular check-ups and screenings'
+        ]
+    },
+    {
+        id: 'junior-health-cover',
+        title: 'Junior Health Cover',
+        category: 'Medical Insurance',
+        shortDescription: 'Affordable health plan designed for children and young dependents aged 0 to 18 years',
+        description: 'Junior Health Cover is specifically designed for children and young dependents, providing comprehensive medical coverage at affordable rates.',
+        icon: <GraduationCap size={48} />,
+        image: 'https://images.unsplash.com/photo-1550355291-bbee04a92027?w=800&q=80',
+        features: [
+            'Child-Focused: Specialized coverage for children',
+            'Affordable: Budget-friendly premiums',
+            'Comprehensive: Full medical services for minors',
+            'Pediatric Care: Specialized children healthcare'
+        ]
+    },
+    {
+        id: 'individual-insurance-cover',
+        title: 'Individual Insurance Cover',
+        category: 'Medical Insurance',
+        shortDescription: 'General medical insurance for individuals or families',
+        description: 'Individual Insurance Cover provides flexible medical protection tailored to personal or family needs with comprehensive benefits.',
+        icon: <Shield size={48} />,
+        image: 'https://images.unsplash.com/photo-1550355291-bbee04a92027?w=800&q=80',
+        features: [
+            'Flexible Coverage: Customizable to individual needs',
+            'Comprehensive Benefits: Full medical protection',
+            'Family Options: Add family members easily',
+            'Affordable Plans: Various premium options'
         ]
     },
     {
         id: 'critical-illness-cover',
         title: 'Critical Illness Cover',
-        category: 'Accidental & Medical Insurance',
-        shortDescription: 'Support when diagnosed with a serious illness.',
-        description: 'Diagnosis of a critical illness can be financially draining. This cover provides a lump sum payout upon diagnosis of specified critical illnesses like cancer, heart attack, or stroke.',
-        icon: <Heart size={48} />,
-        image: 'https://images.unsplash.com/photo-1584432810601-6c7f27d2362b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80',
+        category: 'Medical Insurance',
+        shortDescription: 'Cover against life-threatening critical illnesses like cancer, paralysis, heart problems, stroke, etc',
+        description: 'Critical Illness Cover provides financial protection against life-threatening illnesses with lump sum payouts upon diagnosis.',
+        icon: <AlertTriangle size={48} />,
+        image: 'https://images.unsplash.com/photo-1550355291-bbee04a92027?w=800&q=80',
         features: [
-            'Lump Sum Payout: Use the funds for treatment or lifestyle adjustments.',
-            'Wide Coverage: Covers major critical illnesses.',
-            'Financial Security: Protects your savings during recovery.'
-        ]
-    },
-    {
-        id: 'afyaimara-executive',
-        title: 'AfyaImara Executive',
-        category: 'Accidental & Medical Insurance',
-        shortDescription: 'Executive healthcare for senior management and individuals desiring top-tier cover.',
-        description: 'A premium health insurance package offering high limits, access to top-tier hospitals, and comprehensive benefits for discerning clients.',
-        icon: <BriefcaseIcon size={48} />,
-        image: 'https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80',
-        features: [
-            'High Benefit Limits: Adequate cover for major procedures.',
-            'Overseas Treatment: Coverage for treatment abroad if needed.',
-            'Executive Checkups: Comprehensive annual health screenings.'
-        ]
-    },
-    {
-        id: 'afyaimara-junior',
-        title: 'AfyaImara Junior',
-        category: 'Accidental & Medical Insurance',
-        shortDescription: 'Dedicated health cover for children.',
-        description: 'Ensure your children have access to the best medical care. AfyaImara Junior is a standalone cover for children, offering inpatient and outpatient benefits.',
-        icon: <Heart size={48} />,
-        image: 'https://images.unsplash.com/photo-1502086223501-7ea6ecd79368?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80',
-        features: [
-            'Child-Centric Benefits: Vaccinations and pediatrician visits.',
-            'No Co-payment: Full coverage for specified services.',
-            'School Accident Cover: Protection while at school.'
-        ]
-    },
-    {
-        id: 'afyaimara-county',
-        title: 'AfyaImara County',
-        category: 'Accidental & Medical Insurance',
-        shortDescription: 'Affordable health cover tailored for county regions.',
-        description: 'A customized health insurance solution designed to be accessible and affordable for residents in various counties, ensuring medical care is within reach.',
-        icon: <Home size={48} />,
-        image: 'https://images.unsplash.com/photo-1591115765373-520b7a21769b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80',
-        features: [
-            'County Hospital Network: Access to local accredited hospitals.',
-            'Affordable Premiums: Cost-effective healthcare solution.',
-            'Essential Benefits: Covers core medical needs.'
+            'Critical Coverage: Protection against major illnesses',
+            'Lump Sum Payout: Immediate financial support',
+            'Wide Range: Covers cancer, heart conditions, stroke',
+            'Recovery Support: Financial aid during recovery'
         ]
     },
 
-    // --- Non-Motor Insurance ---
+    // --- Life & Personal Insurance ---
     {
-        id: 'mortgages',
-        title: 'Mortgages',
-        category: 'Non-Motor Insurance',
-        shortDescription: 'Mortgage protection features and partnerships.',
-        description: 'We offer Mortgage Protection insurance which pays off the outstanding mortgage balance in the event of death or permanent disability, securing your family\'s home.',
-        icon: <Home size={48} />,
-        image: 'https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80',
+        id: 'whole-life-assurance',
+        title: 'Whole Life Assurance',
+        category: 'Life & Personal Insurance',
+        shortDescription: 'Long-term financial protection for loved ones in case of death or total disability',
+        description: 'Whole Life Assurance provides lifelong financial protection for your loved ones with guaranteed payouts and cash value accumulation.',
+        icon: <Heart size={48} />,
+        image: 'https://images.unsplash.com/photo-1550355291-bbee04a92027?w=800&q=80',
         features: [
-            'Loan Coverage: Covers the outstanding loan balance.',
-            'Disability Benefit: Payout in case of permanent disability.',
-            'Joint Lives: Coverage for spouses/partners.'
+            'Lifelong Coverage: Protection for entire life',
+            'Guaranteed Payout: Death benefit assured',
+            'Cash Value: Investment component grows over time',
+            'Estate Planning: Helps with wealth transfer'
         ]
     },
     {
-        id: 'savings-and-investments',
-        title: 'Savings and Investments',
-        category: 'Non-Motor Insurance',
-        shortDescription: 'Grow your wealth with our investment-linked insurance plans.',
-        description: 'Secure your financial future with our range of savings and investment products. Whether saving for education, a home, or wealth accumulation.',
-        icon: <PiggyBank size={48} />,
-        image: 'https://images.unsplash.com/photo-1579621970795-87facc2f976d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80',
+        id: 'group-life-cover',
+        title: 'Group Life Cover',
+        category: 'Life & Personal Insurance',
+        shortDescription: 'Life insurance provided for employee groups',
+        description: 'Group Life Cover offers life insurance protection for employee groups with affordable premiums and comprehensive benefits.',
+        icon: <Users size={48} />,
+        image: 'https://images.unsplash.com/photo-1550355291-bbee04a92027?w=800&q=80',
         features: [
-            'Guaranteed Returns: Secure growth for your savings.',
-            'Flexible Contributions: Save at your own pace.',
-            'Tax Benefits: Enjoy tax relief on contributions.'
+            'Group Protection: Coverage for employee groups',
+            'Affordable Premiums: Lower group rates',
+            'Employer Benefit: Attractive employee benefit',
+            'Easy Administration: Simplified group management'
+        ]
+    },
+    {
+        id: 'group-personal-accident',
+        title: 'Group Personal Accident',
+        category: 'Life & Personal Insurance',
+        shortDescription: 'Accident cover for employee groups, ensuring protection at work, or travel as a result of bodily injury',
+        description: 'Group Personal Accident provides comprehensive accident protection for employee groups covering work-related and travel incidents.',
+        icon: <Shield size={48} />,
+        image: 'https://images.unsplash.com/photo-1550355291-bbee04a92027?w=800&q=80',
+        features: [
+            'Accident Protection: Comprehensive coverage for injuries',
+            'Work & Travel: Protection during work and travel',
+            'Group Coverage: All employees included',
+            'Quick Claims: Fast claim processing'
+        ]
+    },
+    {
+        id: 'personal-accident-cover',
+        title: 'Personal Accident Cover',
+        category: 'Life & Personal Insurance',
+        shortDescription: 'Personal accident protection against injury, loss of income due to accidents, disability, or death',
+        description: 'Personal Accident Cover provides financial protection against accidents with coverage for injury, disability, and death benefits.',
+        icon: <AlertTriangle size={48} />,
+        image: 'https://images.unsplash.com/photo-1550355291-bbee04a92027?w=800&q=80',
+        features: [
+            'Accident Coverage: Protection against injuries',
+            'Income Protection: Compensation for lost income',
+            'Disability Benefits: Coverage for permanent disability',
+            'Death Benefit: Financial support for beneficiaries'
         ]
     },
     {
         id: 'pensions',
         title: 'Pensions',
-        category: 'Non-Motor Insurance',
-        shortDescription: 'Retirement planning solutions for individuals and groups.',
-        description: 'Plan for a comfortable retirement with our pension schemes. We offer individual pension plans and corporate schemes to ensure financial independence in your golden years.',
-        icon: <Users size={48} />,
-        image: 'https://images.unsplash.com/photo-1473186578172-c141e6798ee4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80',
+        category: 'Life & Personal Insurance',
+        shortDescription: 'Retirement savings and income planning product to secure when one outlives their incomes',
+        description: 'Pensions provide retirement savings and income planning to ensure financial security when you outlive your working income.',
+        icon: <PiggyBank size={48} />,
+        image: 'https://images.unsplash.com/photo-1550355291-bbee04a92027?w=800&q=80',
         features: [
-            'Tax Efficient: Contributions are tax-deductible.',
-            'Compound Growth: Maximize returns over time.',
-            'Flexible Pay-out Options: Lump sum or annuity options.'
+            'Retirement Planning: Secure your financial future',
+            'Regular Income: Pension payments during retirement',
+            'Investment Growth: Funds grow over time',
+            'Flexible Options: Various pension plans available'
         ]
     },
     {
-        id: 'consultancies',
-        title: 'Consultancies',
-        category: 'Non-Motor Insurance',
-        shortDescription: 'Expert insurance and risk management consultancy.',
-        description: 'Benefit from our expertise. We provide risk management audits, insurance portfolio reviews, and claims consultancy services.',
-        icon: <BriefcaseIcon size={48} />,
-        image: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80',
+        id: 'savings-investment',
+        title: 'Savings & Investment',
+        category: 'Life & Personal Insurance',
+        shortDescription: 'Savings and investment product for financial growth combined with life insurance cover, also known as endowment policies',
+        description: 'Savings & Investment combines financial growth with life insurance protection, offering both investment returns and life coverage.',
+        icon: <TrendingUp size={48} />,
+        image: 'https://images.unsplash.com/photo-1550355291-bbee04a92027?w=800&q=80',
         features: [
-            'Risk Audits: Identify gaps in your coverage.',
-            'Portfolio Review: Optimize your insurance spend.',
-            'Claims Advocacy: Professional support for complex claims.'
+            'Investment Growth: Returns on savings',
+            'Life Coverage: Insurance protection included',
+            'Endowment Benefits: Maturity payouts available',
+            'Flexible Terms: Various saving periods'
         ]
     },
+
+    // --- Property Insurance ---
     {
-        id: 'fire-building-stocks-wiba-employers-liability',
-        title: 'Fire / WIBA / Employers Liability',
-        category: 'Non-Motor Insurance',
-        shortDescription: 'Combined business protection package.',
-        description: 'A comprehensive package for businesses combining Fire protection for assets and WIBA/Employers Liability for staff. Convenient and cost-effective.',
-        icon: <Building size={48} />,
-        image: 'https://images.unsplash.com/photo-1497366216548-37526070297c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80',
+        id: 'domestic-package',
+        title: 'Domestic Package',
+        category: 'Property Insurance',
+        shortDescription: 'Insurance for home and domestic property against risks including domestic employees and public liability',
+        description: 'Domestic Package provides comprehensive insurance for homes and domestic property including employee and liability coverage.',
+        icon: <Home size={48} />,
+        image: 'https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=800&q=80',
         features: [
-            'Asset Protection: Fire and perils cover.',
-            'Staff Protection: WIBA compliance.',
-            'Liability: Employers liability coverage.'
+            'Home Protection: Comprehensive property coverage',
+            'Domestic Employees: Coverage for household staff',
+            'Public Liability: Protection against third-party claims',
+            'All Risks: Wide range of perils covered'
         ]
     },
     {
         id: 'fire-perils-theft-burglary',
-        title: 'Fire / Perils / Theft / Burglary',
-        category: 'Non-Motor Insurance',
-        shortDescription: 'Protect your business assets from fire and theft.',
-        description: 'Essential coverage for any business, protecting your physical assets against fire, natural disasters, and burglary.',
-        icon: <Key size={48} />,
-        image: 'https://images.unsplash.com/photo-1555854816-802b178396e9?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80',
+        title: 'Fire & Perils / Theft / Burglary',
+        category: 'Property Insurance',
+        shortDescription: 'Cover against fire, theft, and burglary for assets and property in business and other work related places',
+        description: 'Fire & Perils / Theft / Burglary provides comprehensive protection for business assets against fire, theft, and burglary risks.',
+        icon: <Shield size={48} />,
+        image: 'https://images.unsplash.com/photo-1550355291-bbee04a92027?w=800&q=80',
         features: [
-            'Fire & Allied Perils: Comprehensive damage protection.',
-            'Burglary: Coverage against forced entry theft.',
-            'Business Interruption: Optional loss of profit cover.'
+            'Fire Protection: Coverage against fire damage',
+            'Theft Coverage: Protection against theft',
+            'Burglary Protection: Security against break-ins',
+            'Business Assets: Coverage for work property'
+        ]
+    },
+    {
+        id: 'fire-domestic',
+        title: 'Fire – Domestic',
+        category: 'Property Insurance',
+        shortDescription: 'Fire protection for homes and other domestic properties',
+        description: 'Fire – Domestic provides specialized fire protection coverage for homes and domestic properties against fire-related damages.',
+        icon: <Home size={48} />,
+        image: 'https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=800&q=80',
+        features: [
+            'Fire Coverage: Protection against fire damage',
+            'Domestic Focus: Specialized for homes',
+            'Rebuilding Costs: Coverage for reconstruction',
+            'Contents Protection: Personal items covered'
+        ]
+    },
+    {
+        id: 'fire-industrial',
+        title: 'Fire – Industrial',
+        category: 'Property Insurance',
+        shortDescription: 'Fire protection for industrial property',
+        description: 'Fire – Industrial provides comprehensive fire protection for industrial properties including factories, warehouses, and equipment.',
+        icon: <Factory size={48} />,
+        image: 'https://images.unsplash.com/photo-1550355291-bbee04a92027?w=800&q=80',
+        features: [
+            'Industrial Coverage: Protection for factories',
+            'Equipment Protection: Machinery and tools covered',
+            'Business Interruption: Coverage for lost income',
+            'Specialized Risks: Industrial-specific perils'
+        ]
+    },
+    {
+        id: 'fire-building-stocks',
+        title: 'Fire, Building & Stocks',
+        category: 'Property Insurance',
+        shortDescription: 'Insurance for business buildings and the goods (stock) inside against fire and related risks',
+        description: 'Fire, Building & Stocks provides comprehensive coverage for business buildings and inventory against fire and related perils.',
+        icon: <Building size={48} />,
+        image: 'https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=800&q=80',
+        features: [
+            'Building Protection: Coverage for business structures',
+            'Stock Coverage: Protection for inventory and goods',
+            'Fire Risks: Comprehensive fire protection',
+            'Business Assets: Complete property coverage'
+        ]
+    },
+    {
+        id: 'wiba-employers-liability',
+        title: "WIBA, Employer's Liability",
+        category: 'Property Insurance',
+        shortDescription: "Covers employees if they get injured or sick while working — WIBA pays them directly as required by law, while Employer's Liability protects the company if workers take legal action",
+        description: "WIBA, Employer's Liability provides mandatory coverage for workplace injuries and protects employers from legal action related to employee claims.",
+        icon: <UserCheck size={48} />,
+        image: 'https://images.unsplash.com/photo-1550355291-bbee04a92027?w=800&q=80',
+        features: [
+            'WIBA Coverage: Mandatory workplace injury protection',
+            'Employer Liability: Legal protection for companies',
+            'Employee Protection: Direct payments to injured workers',
+            'Legal Compliance: Meets statutory requirements'
+        ]
+    },
+
+    // --- Liability Insurance ---
+    {
+        id: 'fidelity-guarantee',
+        title: 'Fidelity Guarantee',
+        category: 'Liability Insurance',
+        shortDescription: 'Protection against employee dishonesty or fraud leading to financial loss',
+        description: 'Fidelity Guarantee provides protection against financial losses resulting from employee dishonesty, fraud, or theft.',
+        icon: <Shield size={48} />,
+        image: 'https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=800&q=80',
+        features: [
+            'Employee Fraud: Protection against dishonest acts',
+            'Financial Loss: Coverage for monetary losses',
+            'Theft Protection: Coverage for employee theft',
+            'Business Security: Financial protection for companies'
+        ]
+    },
+    {
+        id: 'professional-indemnity',
+        title: 'Professional Indemnity (consultancy)',
+        category: 'Liability Insurance',
+        shortDescription: 'Liability cover for professionals against errors or negligence',
+        description: 'Professional Indemnity provides liability coverage for professionals against claims of errors, negligence, or malpractice in their professional services.',
+        icon: <Briefcase size={48} />,
+        image: 'https://images.unsplash.com/photo-1507679799987-c7377bd5871f?w=800&q=80',
+        features: [
+            'Professional Protection: Coverage for professional errors',
+            'Negligence Claims: Protection against negligence lawsuits',
+            'Legal Defense: Coverage for legal costs',
+            'Professional Security: Peace of mind for practitioners'
+        ]
+    },
+    {
+        id: 'public-liability',
+        title: 'Public liability',
+        category: 'Liability Insurance',
+        shortDescription: 'Pays if a customer, visitor, or member of the public is injured or their property is damaged while dealing with your business',
+        description: 'Public Liability provides coverage when third parties are injured or their property is damaged due to your business activities.',
+        icon: <Shield size={48} />,
+        image: 'https://images.unsplash.com/photo-1550355291-bbee04a92027?w=800&q=80',
+        features: [
+            'Third Party Protection: Coverage for public injuries',
+            'Property Damage: Protection for third-party property',
+            'Business Liability: Essential for customer-facing businesses',
+            'Legal Compliance: Meets regulatory requirements'
+        ]
+    },
+    {
+        id: 'political-violence-terrorism',
+        title: 'Political Violence & Terrorism',
+        category: 'Liability Insurance',
+        shortDescription: 'Protection against losses from political violence or terrorism',
+        description: 'Political Violence & Terrorism provides coverage for losses resulting from acts of terrorism, political violence, and civil unrest.',
+        icon: <AlertTriangle size={48} />,
+        image: 'https://images.unsplash.com/photo-1582132717841-38cb4402662c?w=800&q=80',
+        features: [
+            'Terrorism Cover: Protection against terrorist acts',
+            'Political Violence: Coverage for civil unrest',
+            'Business Continuity: Ensures operations can continue',
+            'Asset Protection: Safeguards business assets'
+        ]
+    },
+    {
+        id: 'riot-strike-civil-commotion',
+        title: 'Riot, Strike & Civil Commotion',
+        category: 'Liability Insurance',
+        shortDescription: 'Cover against losses due to riots, strikes, and civil commotion',
+        description: 'Riot, Strike & Civil Commotion provides protection against losses resulting from labor disputes, riots, and civil disturbances.',
+        icon: <Shield size={48} />,
+        image: 'https://images.unsplash.com/photo-1582132717841-38cb4402662c?w=800&q=80',
+        features: [
+            'Riot Protection: Coverage for riot-related losses',
+            'Strike Coverage: Protection during labor strikes',
+            'Civil Commotion: Coverage for civil disturbances',
+            'Business Security: Protects against social unrest'
+        ]
+    },
+    {
+        id: 'carriers-liability',
+        title: "Carrier's Liability",
+        category: 'Liability Insurance',
+        shortDescription: 'Liability cover for goods transported by carriers',
+        description: "Carrier's Liability provides coverage for carriers against liability for loss or damage to goods in their custody during transport.",
+        icon: <Truck size={48} />,
+        image: 'https://images.unsplash.com/photo-1519003722824-194d4455a60c?w=800&q=80',
+        features: [
+            'Goods Protection: Coverage for transported goods',
+            'Carrier Liability: Protection for transport companies',
+            'Transit Coverage: Protection during transportation',
+            'Cargo Security: Financial protection for cargo'
+        ]
+    },
+
+    // --- Motor Insurance ---
+    {
+        id: 'motor-private',
+        title: 'Motor – Private',
+        category: 'Motor Insurance',
+        shortDescription: 'Private car insurance against accidents, theft, or damage and third-party risks',
+        description: 'Motor – Private provides comprehensive insurance coverage for private cars against accidents, theft, damage, and third-party liabilities.',
+        icon: <Car size={48} />,
+        image: 'https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?w=800&q=80',
+        features: [
+            'Comprehensive Coverage: Full protection for private vehicles',
+            'Accident Protection: Coverage for collision and damage',
+            'Theft Protection: Security against vehicle theft',
+            'Third Party Liability: Protection against third-party claims'
+        ]
+    },
+    {
+        id: 'motor-commercial',
+        title: 'Motor – Commercial',
+        category: 'Motor Insurance',
+        shortDescription: 'Insurance cover for commercial vehicles and fleets',
+        description: 'Motor – Commercial provides specialized insurance coverage for commercial vehicles and fleets with comprehensive protection options.',
+        icon: <Truck size={48} />,
+        image: 'https://images.unsplash.com/photo-1519003722824-194d4455a60c?w=800&q=80',
+        features: [
+            'Fleet Coverage: Protection for multiple commercial vehicles',
+            'Business Use: Coverage for business operations',
+            'Comprehensive Protection: Full coverage for commercial risks',
+            'Flexible Options: Customizable for business needs'
+        ]
+    },
+    {
+        id: 'psv-motor-vehicle',
+        title: 'PSV Motor Vehicle Insurance',
+        category: 'Motor Insurance',
+        shortDescription: 'General cover for all types of motor vehicles and third-party risks',
+        description: 'PSV Motor Vehicle Insurance provides comprehensive coverage for public service vehicles and general motor vehicle risks.',
+        icon: <Car size={48} />,
+        image: 'https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?w=800&q=80',
+        features: [
+            'PSV Coverage: Specialized for public service vehicles',
+            'Third Party Protection: Comprehensive liability coverage',
+            'Public Transport: Coverage for passenger vehicles',
+            'Regulatory Compliance: Meets PSV requirements'
+        ]
+    },
+    {
+        id: 'motorcycle-insurance',
+        title: 'Motorcycle Insurance',
+        category: 'Motor Insurance',
+        shortDescription: 'Protection for motorcycles against accidents, theft, or damage and third-party risks',
+        description: 'Motorcycle Insurance provides comprehensive protection for motorcycles against accidents, theft, damage, and third-party liabilities.',
+        icon: <Car size={48} />,
+        image: 'https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?w=800&q=80',
+        features: [
+            'Bike Protection: Comprehensive motorcycle coverage',
+            'Accident Coverage: Protection for rider and bike',
+            'Theft Protection: Security against motorcycle theft',
+            'Third Party Liability: Protection for third-party claims'
         ]
     },
     {
         id: 'cash-in-transit',
         title: 'Cash in Transit',
-        category: 'Non-Motor Insurance',
-        shortDescription: 'Insurance for money in transit or in the safe.',
-        description: 'Protects against loss of money while being transported to/from the bank, or while kept in a locked safe or drawers at the business premises.',
-        icon: <BriefcaseIcon size={48} />,
-        image: 'https://images.unsplash.com/photo-1554224155-1696413565d3?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80',
+        category: 'Motor Insurance',
+        shortDescription: 'Insurance for cash being transported from one place to another like from the shop to the bank',
+        description: 'Cash in Transit provides specialized insurance coverage for cash and valuables during transportation between locations.',
+        icon: <Shield size={48} />,
+        image: 'https://images.unsplash.com/photo-1550355291-bbee04a92027?w=800&q=80',
         features: [
-            'Transit Cover: Money moving between premises and bank.',
-            'Safe Cover: Money secured in a safe.',
-            'Infidelity Cover: Theft by employees (optional).'
+            'Cash Protection: Coverage for cash during transport',
+            'Valuables Coverage: Protection for valuable items',
+            'Transit Security: Coverage during transportation',
+            'Business Protection: Essential for cash businesses'
         ]
     },
+
+    // --- Business & Financial Insurance ---
     {
-        id: 'fire-industrial',
-        title: 'Fire Industrial',
-        category: 'Non-Motor Insurance',
-        shortDescription: 'Heavy-duty fire protection for factories and plants.',
-        description: 'Specialized fire insurance for industrial risks, factories, and manufacturing plants, covering machinery, stock, and buildings.',
-        icon: <Building size={48} />,
-        image: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80',
+        id: 'businessmans-combined-cover',
+        title: "Businessman's Combined Cover",
+        category: 'Business & Financial Insurance',
+        shortDescription: 'Comprehensive insurance cover for businessmen combining multiple risks',
+        description: "Businessman's Combined Cover provides comprehensive insurance coverage for businessmen, combining multiple risks into one convenient policy.",
+        icon: <Briefcase size={48} />,
+        image: 'https://images.unsplash.com/photo-1491336477066-31156b5e4f35?w=800&q=80',
         features: [
-            'Industrial All Risks: Comprehensive plant coverage.',
-            'Stock Declaration: Floating policy for fluctuating stock.',
-            'Spontaneous Combustion: Coverage for specific industrial risks.'
-        ]
-    },
-    {
-        id: 'fire-domestic',
-        title: 'Fire Domestic (Domestic Package)',
-        category: 'Non-Motor Insurance',
-        shortDescription: 'Complete home insurance package.',
-        description: 'Protect your home, contents, and domestic staff with our Domestic Package. Covers fire, theft, and liability.',
-        icon: <Home size={48} />,
-        image: 'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80',
-        features: [
-            'Building & Contents: Comprehensive home protection.',
-            'Domestic Workers: WIBA cover related to domestic staff.',
-            'Occupiers Liability: Protection against third party claims.'
+            'Comprehensive Coverage: Multiple risks in one policy',
+            'Business Protection: Complete business security',
+            'Convenience: Single policy for multiple covers',
+            'Cost Effective: Combined coverage savings'
         ]
     },
     {
         id: 'contractors-all-risk',
-        title: 'Contractors All Risk (CAR)',
-        category: 'Non-Motor Insurance',
-        shortDescription: 'Coverage for construction projects.',
-        description: 'All-risk coverage for construction projects, protecting the works, third party liability, and construction equipment.',
-        icon: <HardHat size={48} />,
-        image: 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80',
+        title: "Contractor's All Risk (CAR)",
+        category: 'Business & Financial Insurance',
+        shortDescription: "Contractor's All Risk (CAR) insurance for construction projects against natural calamities and third party risks",
+        description: "Contractor's All Risk (CAR) provides comprehensive coverage for construction projects against natural calamities and third-party risks.",
+        icon: <Building size={48} />,
+        image: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&q=80',
         features: [
-            'Project Works: Damage to the building under construction.',
-            'Third Party Liability: Injury or damage to public.',
-            'Tools and Plant: Theft or damage to equipment.'
-        ]
-    },
-    {
-        id: 'political-violence-terrorism',
-        title: 'Political Violence / Terrorism',
-        category: 'Non-Motor Insurance',
-        shortDescription: 'Protection against terrorism and political violence.',
-        description: ' safeguard your assets/businesses against loss or damage caused by acts of terrorism, sabotage, riots, strikes, and civil commotion.',
-        icon: <Shield size={48} />,
-        image: 'https://images.unsplash.com/photo-1582132717841-38cb4402662c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80',
-        features: [
-            'Terrorism Cover: Damage from terrorist acts.',
-            'Sabotage: Protection against malicious damage.',
-            'Business Interruption: Loss of revenue due to events.'
-        ]
-    },
-    {
-        id: 'fidelity-guarantee',
-        title: 'Fidelity Guarantee',
-        category: 'Non-Motor Insurance',
-        shortDescription: 'Protection against employee dishonesty.',
-        description: 'Indemnifies the employer against direct pecuniary loss sustained through acts of fraud or dishonesty by employees.',
-        icon: <Key size={48} />,
-        image: 'https://images.unsplash.com/photo-1450101499163-c8848c66ca85?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80',
-        features: [
-            'Employee Fraud: Theft or embezzlement.',
-            'Stock Theft: Misappropriation of goods.',
-            'Positions Guaranteed: Cover specific roles or all staff.'
-        ]
-    },
-    {
-        id: 'professional-indemnity',
-        title: 'Professional Indemnity',
-        category: 'Non-Motor Insurance',
-        shortDescription: 'Liability protection for professionals.',
-        description: 'Essential for professionals (doctors, lawyers, architects, etc.) to protect against claims of negligence or errors in their professional services.',
-        icon: <BriefcaseIcon size={48} />,
-        image: 'https://images.unsplash.com/photo-1507679799987-c7377bd5871f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80',
-        features: [
-            'Negligence Claims: Defense and settlement costs.',
-            'Errors & Omissions: Coverage for mistakes.',
-            'Defamation: Protection against libel/slander claims.'
-        ]
-    },
-    {
-        id: 'businessmans-combined-cover',
-        title: 'Businessman\'s Combined Cover',
-        category: 'Non-Motor Insurance',
-        shortDescription: 'All-in-one policy for SMEs.',
-        description: 'A bundled policy designed for small to medium businesses, combining Fire, Burglary, WIBA, and other essential covers into one simple policy.',
-        icon: <Briefcase size={48} />,
-        image: 'https://images.unsplash.com/photo-1491336477066-31156b5e4f35?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80',
-        features: [
-            'Simplified Management: One policy document.',
-            'Cost Effective: Cheaper than separate policies.',
-            'Comprehensive: Covers key business risks.'
-        ]
-    },
-    {
-        id: 'biasharasure-old-mutual',
-        title: 'BiasharaSure – Old Mutual',
-        category: 'Non-Motor Insurance',
-        shortDescription: 'Customized business protection from Old Mutual.',
-        description: 'BiasharaSure is a flexible business insurance package tailored for SMEs, covering assets, liability, and employees.',
-        icon: <Briefcase size={48} />,
-        image: 'https://images.unsplash.com/photo-1442504028989-ab58b5f29a4a?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80',
-        features: [
-            'Flexible Modules: Pick what you need.',
-            'Business Continuity: Supports recovery after loss.',
-            'Trusted Partner: Backed by Old Mutual.'
-        ]
-    },
-    {
-        id: 'school-combined-cover',
-        title: 'School Combined Cover',
-        category: 'Non-Motor Insurance',
-        shortDescription: 'Comprehensive insurance for educational institutions.',
-        description: 'Specifically designed for schools and colleges, covering buildings, students (personal accident), staff (WIBA), and liability.',
-        icon: <GraduationCap size={48} />,
-        image: 'https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80',
-        features: [
-            'Assets Cover: Classrooms and facilities.',
-            'Student Accident: Medical cover for students.',
-            'Public Liability: Protection for events and visitors.'
+            'Construction Coverage: Protection for building projects',
+            'Natural Calamities: Coverage for natural disasters',
+            'Third Party Risks: Liability protection',
+            'Project Security: Comprehensive construction protection'
         ]
     },
     {
         id: 'bid-bond',
         title: 'Bid Bond',
-        category: 'Non-Motor Insurance',
-        shortDescription: 'Tender security for contractors.',
-        description: 'A guarantee required during the tendering process to ensure that the bidder will accept the contract if awarded.',
+        category: 'Business & Financial Insurance',
+        shortDescription: 'Bid bond insurance required during tendering and bidding processes to secure the tenderer against financial implications',
+        description: 'Bid Bond provides insurance security required during tendering and bidding processes to protect against financial implications.',
         icon: <Shield size={48} />,
-        image: 'https://images.unsplash.com/photo-1586282391129-59aef09a9632?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80',
+        image: 'https://images.unsplash.com/photo-1586282391129-59aef09a9632?w=800&q=80',
         features: [
-            'Tender Compliance: Meets standard tender requirements.',
-            'Quick Processing: Fast turnaround for deadlines.',
-            'Competitive Rates: Affordable security.'
+            'Tender Security: Protection during bidding',
+            'Financial Security: Guarantees bid commitments',
+            'Contractor Support: Essential for contractors',
+            'Bidding Protection: Secures tender process'
         ]
     },
     {
-        id: 'carriers-liability',
-        title: 'Carriers Liability',
-        category: 'Non-Motor Insurance',
-        shortDescription: 'Protection for transporters.',
-        description: 'Covers the liability of a transporter for loss or damage to goods while in their custody during transit.',
-        icon: <Car size={48} />,
-        image: 'https://images.unsplash.com/photo-1519003722824-194d4455a60c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80',
+        id: 'mortgages',
+        title: 'Mortgages',
+        category: 'Business & Financial Insurance',
+        shortDescription: 'Insurance solutions related to mortgages and home financing',
+        description: 'Mortgages provide insurance solutions related to mortgages and home financing, protecting both lenders and borrowers.',
+        icon: <Home size={48} />,
+        image: 'https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=800&q=80',
         features: [
-            'Goods in Transit: Coverage for client goods.',
-            'Theft & Accident: Protection against road risks.',
-            'Legal Liability: Compensation for cargo owners.'
+            'Mortgage Protection: Coverage for home loans',
+            'Home Financing: Insurance for property financing',
+            'Lender Security: Protection for financial institutions',
+            'Borrower Protection: Coverage for homeowners'
+        ]
+    },
+    {
+        id: 'public-liability-business',
+        title: 'Public Liability',
+        category: 'Business & Financial Insurance',
+        shortDescription: 'Insurance package tailored for SMEs, Businesses, individual enterprises and corporate institutions against risks exposed to third-parties',
+        description: 'Public Liability provides tailored insurance packages for SMEs, businesses, and corporate institutions against third-party risks.',
+        icon: <Shield size={48} />,
+        image: 'https://images.unsplash.com/photo-1550355291-bbee04a92027?w=800&q=80',
+        features: [
+            'SME Protection: Coverage for small businesses',
+            'Third Party Risks: Protection against public liability',
+            'Business Security: Comprehensive coverage',
+            'Corporate Protection: Coverage for institutions'
+        ]
+    },
+    {
+        id: 'school-combined-cover',
+        title: 'School Combined Cover',
+        category: 'Business & Financial Insurance',
+        shortDescription: 'Comprehensive school insurance package covering property, liability, and students',
+        description: 'School Combined Cover provides comprehensive insurance package for educational institutions covering property, liability, and students.',
+        icon: <GraduationCap size={48} />,
+        image: 'https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=800&q=80',
+        features: [
+            'Educational Coverage: Protection for schools',
+            'Property Protection: Building and facilities coverage',
+            'Student Protection: Coverage for students',
+            'Liability Protection: Comprehensive liability coverage'
+        ]
+    },
+
+    // --- Agriculture Insurance ---
+    {
+        id: 'crop-insurance',
+        title: 'Crop insurance',
+        category: 'Agriculture insurance',
+        shortDescription: 'Protects farmers against loss of crops due too drought, floods, pests, diseases, fire, hail',
+        description: 'Crop insurance protects farmers against loss of crops due to drought, floods, pests, diseases, fire, and hail.',
+        icon: <Sprout size={48} />,
+        image: 'https://images.unsplash.com/photo-1500698213562-23164b8c78b4?w=800&q=80',
+        features: [
+            'Crop Protection: Coverage for crop losses',
+            'Weather Protection: Coverage for natural events',
+            'Pest & Disease: Protection against crop damage',
+            'Farmer Security: Financial protection for farmers'
+        ]
+    },
+    {
+        id: 'livestock-insurance',
+        title: 'Livestock insurance',
+        category: 'Agriculture insurance',
+        shortDescription: 'Covers animals (cows, goats, sheep) against death from diseases, accidents, theft',
+        description: 'Livestock insurance covers animals such as cows, goats, and sheep against death from diseases, accidents, and theft.',
+        icon: <Dog size={48} />,
+        image: 'https://images.unsplash.com/photo-1548191019-601a6c77c4dc?w=800&q=80',
+        features: [
+            'Animal Protection: Coverage for livestock',
+            'Disease Coverage: Protection against animal diseases',
+            'Accident Protection: Coverage for animal accidents',
+            'Theft Protection: Security against livestock theft'
+        ]
+    },
+    {
+        id: 'index-based-insurance',
+        title: 'Index based insurance',
+        category: 'Agriculture insurance',
+        shortDescription: 'Payouts triggered by weather (rainfall, drought) or pasture conditions, not by farm visits',
+        description: 'Index based insurance provides payouts triggered by weather conditions such as rainfall, drought, or pasture conditions, without requiring farm visits.',
+        icon: <Trees size={48} />,
+        image: 'https://images.unsplash.com/photo-1500698213562-23164b8c78b4?w=800&q=80',
+        features: [
+            'Weather Based: Payouts triggered by weather conditions',
+            'Automated Process: No farm visits required',
+            'Quick Payouts: Fast claim processing',
+            'Objective Assessment: Based on weather indices'
+        ]
+    },
+    {
+        id: 'green-house-specialty-cover',
+        title: 'Green house and specialty cover',
+        category: 'Agriculture insurance',
+        shortDescription: 'Protects greenhouses, equipment, and high value crops',
+        description: 'Green house and specialty cover protects greenhouses, equipment, and high value crops with specialized insurance protection.',
+        icon: <Trees size={48} />,
+        image: 'https://images.unsplash.com/photo-1586282391129-59aef09a9632?w=800&q=80',
+        features: [
+            'Greenhouse Protection: Coverage for greenhouse structures',
+            'Equipment Coverage: Protection for agricultural equipment',
+            'High Value Crops: Coverage for specialty crops',
+            'Specialized Protection: Tailored for agricultural needs'
+        ]
+    },
+    {
+        id: 'pet-insurance',
+        title: 'Pet insurance',
+        category: 'Agriculture insurance',
+        shortDescription: 'Covers domestic animals (dogs, cats) against illnesses, accidents, surgery costs or theft',
+        description: 'Pet insurance covers domestic animals such as dogs and cats against illnesses, accidents, surgery costs, or theft.',
+        icon: <Dog size={48} />,
+        image: 'https://images.unsplash.com/photo-1548191019-601a6c77c4dc?w=800&q=80',
+        features: [
+            'Pet Health: Coverage for pet illnesses',
+            'Accident Coverage: Protection for pet accidents',
+            'Surgery Coverage: Coverage for medical procedures',
+            'Theft Protection: Security against pet theft'
+        ]
+    },
+
+    // --- Travel insurance ---
+    {
+        id: 'single-trip-cover',
+        title: 'Single trip cover',
+        category: 'Travel insurance',
+        shortDescription: 'One off protection for your next journey',
+        description: 'Single trip cover provides one-off protection for your next journey with comprehensive travel insurance benefits.',
+        icon: <Plane size={48} />,
+        image: 'https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=800&q=80',
+        features: [
+            'Single Journey: Coverage for one trip',
+            'Comprehensive Protection: Full travel coverage',
+            'Trip Security: Protection for travel risks',
+            'Flexible Coverage: Tailored for specific trips'
+        ]
+    },
+    {
+        id: 'annual-multi-trip-cover',
+        title: 'Annual multi trip cover',
+        category: 'Travel insurance',
+        shortDescription: 'Unlimited trips in a year (for frequent travellers)',
+        description: 'Annual multi trip cover provides unlimited trips in a year, ideal for frequent travelers with comprehensive protection.',
+        icon: <Plane size={48} />,
+        image: 'https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=800&q=80',
+        features: [
+            'Unlimited Trips: Coverage for multiple journeys',
+            'Annual Coverage: Protection for one year',
+            'Frequent Traveler: Ideal for regular travelers',
+            'Comprehensive Protection: Full travel security'
+        ]
+    },
+    {
+        id: 'schengen-travel-plan',
+        title: 'Schengen Travel plan',
+        category: 'Travel insurance',
+        shortDescription: 'Embassy approved cover for your Europe visa application',
+        description: 'Schengen Travel plan provides embassy approved cover for your Europe visa application with comprehensive travel protection.',
+        icon: <Plane size={48} />,
+        image: 'https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=800&q=80',
+        features: [
+            'Visa Requirement: Embassy approved coverage',
+            'Europe Travel: Coverage for Schengen area',
+            'Visa Support: Documentation for visa application',
+            'Comprehensive Protection: Full travel coverage'
+        ]
+    },
+    {
+        id: 'student-travel-plan',
+        title: 'Student Travel plan',
+        category: 'Travel insurance',
+        shortDescription: 'Protection for students studying abroad',
+        description: 'Student Travel plan provides specialized protection for students studying abroad with comprehensive coverage benefits.',
+        icon: <Plane size={48} />,
+        image: 'https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=800&q=80',
+        features: [
+            'Student Protection: Coverage for studying abroad',
+            'Educational Travel: Specialized for students',
+            'Comprehensive Coverage: Full protection benefits',
+            'International Support: Coverage for overseas study'
+        ]
+    },
+    {
+        id: 'corporate-group-travel-plan',
+        title: 'Corporate/group travel plan',
+        category: 'Travel insurance',
+        shortDescription: 'Tailored for organizations sending teams overseas',
+        description: 'Corporate/group travel plan provides tailored coverage for organizations sending teams overseas with comprehensive protection.',
+        icon: <Plane size={48} />,
+        image: 'https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=800&q=80',
+        features: [
+            'Corporate Coverage: Protection for business travel',
+            'Group Travel: Coverage for teams',
+            'Business Protection: Tailored for organizations',
+            'Overseas Support: International coverage'
         ]
     }
 ];
