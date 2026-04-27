@@ -1,0 +1,388 @@
+/* Policies Page Styles */
+.policies-container {
+  padding: 24px;
+  background-color: #f8f9fa;
+  min-height: 100vh;
+}
+
+.policies-header {
+  margin-bottom: 24px;
+}
+
+.policies-title {
+  font-size: 28px;
+  font-weight: 700;
+  color: #2c3e50;
+  margin: 0 0 8px 0;
+}
+
+.policies-subtitle {
+  font-size: 16px;
+  color: #6c757d;
+  margin: 0;
+}
+
+.policies-filters {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+}
+
+.policies-search {
+  position: relative;
+  flex: 1;
+  min-width: 300px;
+}
+
+.policies-search-icon {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  color: #6c757d;
+}
+
+.policies-search-input {
+  width: 100%;
+  padding: 12px 12px 12px 44px;
+  border: 1px solid #ced4da;
+  border-radius: 8px;
+  font-size: 14px;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.policies-search-input:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 0 3px rgba(0,123,255,0.1);
+}
+
+.policies-status-filter {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.policies-status-filter label {
+  font-weight: 500;
+  color: #495057;
+  font-size: 14px;
+}
+
+.policies-status-select {
+  padding: 8px 12px;
+  border: 1px solid #ced4da;
+  border-radius: 6px;
+  font-size: 14px;
+  background-color: white;
+  cursor: pointer;
+}
+
+.policies-filter-btn,
+.policies-export-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 16px;
+  border: 1px solid #ced4da;
+  border-radius: 6px;
+  background-color: white;
+  color: #495057;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.policies-filter-btn:hover,
+.policies-export-btn:hover {
+  background-color: #f8f9fa;
+  border-color: #adb5bd;
+}
+
+.policies-filter-icon,
+.policies-export-icon {
+  width: 16px;
+  height: 16px;
+}
+
+.policies-table-container {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  overflow: hidden;
+}
+
+.policies-table-wrapper {
+  overflow-x: auto;
+}
+
+.policies-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 1200px;
+}
+
+.policies-table-head {
+  background-color: #f8f9fa;
+}
+
+.policies-table-header {
+  padding: 16px 12px;
+  text-align: left;
+  font-weight: 600;
+  color: #495057;
+  font-size: 14px;
+  border-bottom: 1px solid #dee2e6;
+}
+
+.policies-table-body {
+  background-color: white;
+}
+
+.policies-table-row {
+  transition: background-color 0.2s;
+}
+
+.policies-table-row:hover {
+  background-color: #f8f9fa;
+}
+
+.policies-table-cell {
+  padding: 12px;
+  border-bottom: 1px solid #dee2e6;
+  font-size: 14px;
+  color: #495057;
+}
+
+.policies-client-name,
+.policies-contact,
+.policies-policy-no,
+.policies-date,
+.policies-class,
+.policies-cover,
+.policies-expiry-date,
+.policies-premium,
+.policies-paid,
+.policies-balance {
+  font-weight: 500;
+  color: #2c3e50;
+}
+
+.policies-status {
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.status-active {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+.status-expiring {
+  background-color: #fff3cd;
+  color: #856404;
+}
+
+.status-expired {
+  background-color: #f8d7da;
+  color: #721c24;
+}
+
+.policies-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.policies-action-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 6px;
+  border-radius: 4px;
+  transition: background-color 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.policies-action-btn.view {
+  color: #17a2b8;
+}
+
+.policies-action-btn.view:hover {
+  background-color: #e1f5f7;
+}
+
+.policies-action-btn.edit {
+  color: #ffc107;
+}
+
+.policies-action-btn.edit:hover {
+  background-color: #fff8e1;
+}
+
+.policies-action-btn.delete {
+  color: #dc3545;
+}
+
+.policies-action-btn.delete:hover {
+  background-color: #f8d7da;
+}
+
+.policies-action-icon {
+  width: 16px;
+  height: 16px;
+}
+
+/* Modal Styles */
+.policy-details,
+.policy-edit-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.detail-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 0;
+  border-bottom: 1px solid #e9ecef;
+}
+
+.detail-row:last-child {
+  border-bottom: none;
+}
+
+.detail-row label {
+  font-weight: 600;
+  color: #495057;
+  min-width: 120px;
+}
+
+.detail-row span {
+  color: #2c3e50;
+  flex: 1;
+  text-align: right;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-group label {
+  font-weight: 500;
+  color: #495057;
+  font-size: 14px;
+}
+
+.form-group input,
+.form-group select {
+  padding: 10px 12px;
+  border: 1px solid #ced4da;
+  border-radius: 6px;
+  font-size: 14px;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 0 3px rgba(0,123,255,0.1);
+}
+
+.modal-actions {
+  display: flex;
+  gap: 12px;
+  justify-content: flex-end;
+  margin-top: 24px;
+  padding-top: 16px;
+  border-top: 1px solid #e9ecef;
+}
+
+.btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn-secondary {
+  background-color: #6c757d;
+  color: white;
+}
+
+.btn-secondary:hover {
+  background-color: #545b62;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .policies-container {
+    padding: 16px;
+  }
+  
+  .policies-filters {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .policies-search {
+    min-width: auto;
+  }
+  
+  .policies-status-filter {
+    justify-content: space-between;
+  }
+  
+  .policies-table-wrapper {
+    overflow-x: scroll;
+  }
+  
+  .policies-table {
+    min-width: 800px;
+  }
+}
+
+@media (max-width: 480px) {
+  .policies-container {
+    padding: 12px;
+  }
+  
+  .policies-title {
+    font-size: 24px;
+  }
+  
+  .policies-table-header,
+  .policies-table-cell {
+    padding: 8px;
+    font-size: 12px;
+  }
+  
+  .policies-actions {
+    flex-direction: column;
+    gap: 4px;
+  }
+}

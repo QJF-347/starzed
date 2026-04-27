@@ -1,0 +1,622 @@
+/* Premium Rates Styles */
+.premium-rates-container {
+  padding: 2rem;
+  background-color: #f8fafc;
+  min-height: 100vh;
+}
+
+/* Header Section */
+.premium-rates-header {
+  margin-bottom: 2rem;
+}
+
+.premium-rates-header-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+}
+
+.premium-rates-header-left {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.premium-rates-back-btn {
+  display: flex;
+  align-items: center;
+  color: #64748b;
+  text-decoration: none;
+  font-size: 0.875rem;
+  font-weight: 500;
+  transition: color 0.2s ease;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.premium-rates-back-btn:hover {
+  color: #3b82f6;
+}
+
+.premium-rates-back-icon {
+  width: 1rem;
+  height: 1rem;
+}
+
+.premium-rates-title {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #1e293b;
+  margin: 0;
+  background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.premium-rates-subtitle {
+  color: #64748b;
+  font-size: 1.125rem;
+  font-weight: 400;
+  margin: 0;
+}
+
+.premium-rates-header-actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.premium-rates-btn {
+  display: flex;
+  align-items: center;
+  padding: 0.875rem 1.75rem;
+  border-radius: 0.75rem;
+  border: 1px solid #e2e8f0;
+  background-color: white;
+  color: #64748b;
+  font-size: 0.875rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  gap: 0.625rem;
+}
+
+.premium-rates-btn:hover {
+  background-color: #f8fafc;
+  border-color: #cbd5e1;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.premium-rates-btn.primary {
+  background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+  color: white;
+  border-color: transparent;
+  box-shadow: 0 4px 14px rgba(59, 130, 246, 0.4);
+}
+
+.premium-rates-btn.primary:hover {
+  background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+  box-shadow: 0 6px 20px rgba(59, 130, 246, 0.5);
+}
+
+.premium-rates-btn-icon {
+  width: 1.125rem;
+  height: 1.125rem;
+}
+
+/* Stats Grid */
+.premium-rates-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.premium-rates-stat-card {
+  background: white;
+  border-radius: 0.75rem;
+  padding: 1rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e2e8f0;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.premium-rates-stat-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #3b82f6 0%, #2563eb 100%);
+}
+
+.premium-rates-stat-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.premium-rates-stat-card:nth-child(1)::before {
+  background: linear-gradient(90deg, #3b82f6 0%, #2563eb 100%);
+}
+
+.premium-rates-stat-card:nth-child(2)::before {
+  background: linear-gradient(90deg, #10b981 0%, #059669 100%);
+}
+
+.premium-rates-stat-card:nth-child(3)::before {
+  background: linear-gradient(90deg, #f97316 0%, #ea580c 100%);
+}
+
+.premium-rates-stat-card:nth-child(4)::before {
+  background: linear-gradient(90deg, #8b5cf6 0%, #7c3aed 100%);
+}
+
+.premium-rates-stat-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.premium-rates-stat-info {
+  flex: 1;
+}
+
+.premium-rates-stat-title {
+  font-size: 0.75rem;
+  color: #64748b;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+  text-transform: uppercase;
+  letter-spacing: 0.025em;
+}
+
+.premium-rates-stat-value {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: #1e293b;
+  margin-bottom: 0.25rem;
+  line-height: 1;
+}
+
+.premium-rates-stat-icon-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 0.5rem;
+  flex-shrink: 0;
+}
+
+.premium-rates-stat-icon-wrapper.blue {
+  background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 100%);
+  color: #1d4ed8;
+}
+
+.premium-rates-stat-icon-wrapper.green {
+  background: linear-gradient(135deg, #d1fae5 0%, #a7f3d0 100%);
+  color: #059669;
+}
+
+.premium-rates-stat-icon-wrapper.orange {
+  background: linear-gradient(135deg, #fed7aa 0%, #fdba74 100%);
+  color: #ea580c;
+}
+
+.premium-rates-stat-icon-wrapper.purple {
+  background: linear-gradient(135deg, #e9d5ff 0%, #c084fc 100%);
+  color: #7c3aed;
+}
+
+.premium-rates-stat-icon {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+/* Filters Section */
+.premium-rates-filters-section {
+  margin-bottom: 2rem;
+}
+
+.premium-rates-filters-row {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.premium-rates-search-wrapper {
+  position: relative;
+  flex: 1;
+  min-width: 300px;
+}
+
+.premium-rates-search-icon {
+  position: absolute;
+  left: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 1.25rem;
+  height: 1.25rem;
+  color: #94a3b8;
+  z-index: 1;
+}
+
+.premium-rates-search-input {
+  width: 100%;
+  padding: 0.875rem 1rem 0.875rem 3rem;
+  border: 2px solid #e2e8f0;
+  border-radius: 0.75rem;
+  font-size: 0.875rem;
+  background-color: white;
+  transition: all 0.3s ease;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.premium-rates-search-input:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1), 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.premium-rates-filter-controls {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.premium-rates-filter-select {
+  padding: 0.875rem 1rem;
+  border: 2px solid #e2e8f0;
+  border-radius: 0.75rem;
+  font-size: 0.875rem;
+  background-color: white;
+  transition: all 0.3s ease;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  min-width: 150px;
+}
+
+.premium-rates-filter-select:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1), 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Table Styles */
+.premium-rates-table-container {
+  background: white;
+  border-radius: 0.75rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e2e8f0;
+  overflow: hidden;
+}
+
+.premium-rates-table-wrapper {
+  overflow-x: auto;
+  max-height: 600px;
+  overflow-y: auto;
+}
+
+.premium-rates-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.875rem;
+}
+
+.premium-rates-table-head {
+  background: linear-gradient(135deg, #f1f5f9 0%, #e2e8f0 100%);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.premium-rates-table-header {
+  padding: 1rem;
+  text-align: left;
+  font-weight: 700;
+  color: #374151;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border-bottom: 2px solid #e2e8f0;
+  white-space: nowrap;
+}
+
+.premium-rates-table-body {
+  background: white;
+}
+
+.premium-rates-table-row {
+  border-bottom: 1px solid #f1f5f9;
+  transition: all 0.2s ease;
+}
+
+.premium-rates-table-row:hover {
+  background-color: #f8fafc;
+}
+
+.premium-rates-table-cell {
+  padding: 1rem;
+  vertical-align: middle;
+  border-bottom: 1px solid #f1f5f9;
+  white-space: nowrap;
+}
+
+.premium-rates-company-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.premium-rates-company-name {
+  font-weight: 600;
+  color: #1e293b;
+}
+
+.premium-rates-company-code {
+  font-size: 0.75rem;
+  color: #64748b;
+  font-weight: 500;
+}
+
+.premium-rates-category-badge {
+  display: inline-block;
+  padding: 0.25rem 0.625rem;
+  background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 100%);
+  color: #1d4ed8;
+  border-radius: 0.25rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+.premium-amount {
+  font-weight: 600;
+  color: #374151;
+}
+
+.loading-amount {
+  font-weight: 600;
+  color: #d97706;
+}
+
+.discount-amount {
+  font-weight: 600;
+  color: #059669;
+}
+
+.total-amount {
+  font-weight: 700;
+  color: #1e293b;
+  font-size: 0.95rem;
+}
+
+.premium-rates-commission-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.premium-rates-commission-rate {
+  font-weight: 600;
+  color: #7c3aed;
+}
+
+.premium-rates-commission-amount {
+  font-size: 0.75rem;
+  color: #64748b;
+}
+
+.premium-rates-date-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.premium-rates-effective-date {
+  font-weight: 500;
+  color: #374151;
+}
+
+.premium-rates-expiry-date {
+  font-size: 0.75rem;
+  color: #64748b;
+}
+
+.premium-rates-status-badge {
+  display: inline-block;
+  padding: 0.25rem 0.625rem;
+  border-radius: 0.25rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.025em;
+}
+
+.premium-rates-status-badge.active {
+  background: linear-gradient(135deg, #d1fae5 0%, #a7f3d0 100%);
+  color: #059669;
+}
+
+.premium-rates-status-badge.inactive {
+  background: linear-gradient(135deg, #fee2e2 0%, #fecaca 100%);
+  color: #dc2626;
+}
+
+.premium-rates-status-badge.pending {
+  background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+  color: #d97706;
+}
+
+.premium-rates-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.premium-rates-action-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem;
+  border-radius: 0.375rem;
+  border: 1px solid #e2e8f0;
+  background: white;
+  color: #64748b;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.premium-rates-action-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.premium-rates-action-btn.view:hover {
+  background-color: #dbeafe;
+  color: #1d4ed8;
+  border-color: #1d4ed8;
+}
+
+.premium-rates-action-btn.edit:hover {
+  background-color: #fef3c7;
+  color: #d97706;
+  border-color: #d97706;
+}
+
+.premium-rates-action-btn.delete:hover {
+  background-color: #fee2e2;
+  color: #dc2626;
+  border-color: #dc2626;
+}
+
+.premium-rates-action-icon {
+  width: 0.875rem;
+  height: 0.875rem;
+}
+
+/* Empty State */
+.premium-rates-empty-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.premium-rates-empty-icon {
+  width: 4rem;
+  height: 4rem;
+  color: #cbd5e1;
+  margin-bottom: 1rem;
+}
+
+.premium-rates-empty-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #374151;
+  margin: 0 0 0.5rem 0;
+}
+
+.premium-rates-empty-description {
+  color: #6b7280;
+  font-size: 0.875rem;
+  margin: 0;
+}
+
+/* Scrollbar Styles */
+.premium-rates-table-wrapper::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+.premium-rates-table-wrapper::-webkit-scrollbar-track {
+  background: #f1f5f9;
+  border-radius: 4px;
+}
+
+.premium-rates-table-wrapper::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+
+.premium-rates-table-wrapper::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .premium-rates-filters-row {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .premium-rates-search-wrapper {
+    min-width: auto;
+  }
+  
+  .premium-rates-filter-controls {
+    flex-wrap: wrap;
+  }
+  
+  .premium-rates-filter-select {
+    flex: 1;
+    min-width: 150px;
+  }
+}
+
+@media (max-width: 768px) {
+  .premium-rates-container {
+    padding: 1rem;
+  }
+  
+  .premium-rates-header-content {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+  
+  .premium-rates-stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .premium-rates-filter-controls {
+    flex-direction: column;
+  }
+  
+  .premium-rates-table-cell {
+    padding: 0.75rem 0.5rem;
+    font-size: 0.75rem;
+  }
+  
+  .premium-rates-table-header {
+    padding: 0.75rem 0.5rem;
+    font-size: 0.625rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .premium-rates-container {
+    padding: 0.75rem;
+  }
+  
+  .premium-rates-stats-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .premium-rates-actions {
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+  
+  .premium-rates-action-btn {
+    padding: 0.375rem;
+  }
+}

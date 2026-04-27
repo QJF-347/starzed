@@ -1,0 +1,15 @@
+Django==5.2.12
+djangorestframework==3.17.1
+djangorestframework-simplejwt==5.5.1
+django-cors-headers==4.9.0
+python-dotenv==1.2.2
+psycopg2-binary==2.9.11
+dj-database-url==3.1.2
+gunicorn==23.0.0
+Flask==3.1.0
+flask-cors==5.0.0
+Pillow==11.0.0
+requests==2.32.3
+google-api-python-client==2.154.0
+google-auth-httplib2==0.2.1
+google-auth-oauthlib==1.2.1

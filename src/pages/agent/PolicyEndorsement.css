@@ -1,0 +1,850 @@
+/* Policy Endorsement Page Styles - Following Agent Files Theme */
+
+/* Main Container */
+.policy-endorsement-container {
+  padding: 2rem;
+  background-color: #f8fafc;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header Section */
+.policy-endorsement-header {
+  margin-bottom: 2rem;
+}
+
+.policy-endorsement-header-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+}
+
+.policy-endorsement-header-left {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.policy-endorsement-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.policy-endorsement-subtitle {
+  font-size: 1rem;
+  color: #64748b;
+  margin: 0;
+  font-weight: 400;
+}
+
+.policy-endorsement-header-actions {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+}
+
+/* Search and Filters Section */
+.policy-endorsement-filters {
+  background: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.06);
+  border: 1px solid #e2e8f0;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.policy-endorsement-search {
+  position: relative;
+  flex: 1;
+  max-width: 400px;
+}
+
+.policy-endorsement-search-icon {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  color: #64748b;
+}
+
+.policy-endorsement-search-input {
+  width: 100%;
+  padding: 12px 12px 12px 44px;
+  border: 2px solid #e2e8f0;
+  border-radius: 8px;
+  font-size: 14px;
+  transition: all 0.2s ease;
+  background-color: #f8fafc;
+}
+
+.policy-endorsement-search-input:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+  background-color: white;
+}
+
+.policy-endorsement-filter-btn,
+.policy-endorsement-export-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 16px;
+  border: 2px solid #e2e8f0;
+  border-radius: 8px;
+  background-color: white;
+  color: #475569;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.policy-endorsement-filter-btn:hover,
+.policy-endorsement-export-btn:hover {
+  background-color: #f8fafc;
+  border-color: #cbd5e1;
+  transform: translateY(-1px);
+}
+
+.policy-endorsement-filter-icon,
+.policy-endorsement-export-icon {
+  width: 16px;
+  height: 16px;
+}
+
+/* Main Content Grid */
+.policy-endorsement-main-content {
+  margin-bottom: 2rem;
+}
+
+.policy-endorsement-content-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+/* Panels */
+.policy-endorsement-left-panel,
+.policy-endorsement-right-panel {
+  background: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.06);
+  border: 1px solid #e2e8f0;
+  height: fit-content;
+}
+
+.policy-endorsement-left-panel {
+  min-height: 600px;
+}
+
+.policy-endorsement-right-panel {
+  position: sticky;
+  top: 2rem;
+}
+
+/* Panel Sections */
+.policy-endorsement-panel-section {
+  margin-bottom: 2rem;
+}
+
+.policy-endorsement-panel-section:last-child {
+  margin-bottom: 0;
+}
+
+.policy-endorsement-panel-title {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #1e293b;
+  margin: 0 0 1.25rem 0;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid #e2e8f0;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.policy-endorsement-panel-title::before {
+  content: '';
+  width: 4px;
+  height: 20px;
+  background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+  border-radius: 2px;
+}
+
+
+/* Button Styles */
+.policy-endorsement-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.policy-endorsement-btn-primary {
+  background-color: #3b82f6;
+  color: white;
+}
+
+.policy-endorsement-btn-primary:hover {
+  background-color: #2563eb;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(59, 130, 246, 0.3);
+}
+
+.policy-endorsement-btn-secondary {
+  background-color: #64748b;
+  color: white;
+}
+
+.policy-endorsement-btn-secondary:hover {
+  background-color: #475569;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(100, 116, 139, 0.3);
+}
+
+.policy-endorsement-btn-outline {
+  background-color: transparent;
+  color: #3b82f6;
+  border: 2px solid #3b82f6;
+}
+
+.policy-endorsement-btn-outline:hover {
+  background-color: #3b82f6;
+  color: white;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(59, 130, 246, 0.3);
+}
+
+/* Table Styles */
+.policy-endorsement-table-container {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.06);
+  border: 1px solid #e2e8f0;
+  overflow: hidden;
+  margin-bottom: 1.5rem;
+}
+
+.policy-endorsement-table-wrapper {
+  overflow-x: auto;
+}
+
+.policy-endorsement-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+.policy-endorsement-table th {
+  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+  color: #475569;
+  font-weight: 600;
+  text-align: left;
+  padding: 16px 12px;
+  border-bottom: 2px solid #e2e8f0;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  white-space: nowrap;
+}
+
+.policy-endorsement-table td {
+  padding: 16px 12px;
+  border-bottom: 1px solid #e2e8f0;
+  color: #1e293b;
+  vertical-align: middle;
+}
+
+.policy-endorsement-table tbody tr:hover {
+  background-color: #f8fafc;
+}
+
+.policy-endorsement-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+/* Action Buttons */
+.policy-endorsement-action-buttons {
+  display: flex;
+  gap: 6px;
+  justify-content: center;
+}
+
+.policy-endorsement-btn-icon {
+  background: none;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  padding: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.policy-endorsement-btn-icon:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.policy-endorsement-btn-icon .icon {
+  width: 16px;
+  height: 16px;
+}
+
+.policy-endorsement-btn-view {
+  color: #0ea5e9;
+  border-color: #0ea5e9;
+}
+
+.policy-endorsement-btn-view:hover {
+  background-color: #0ea5e9;
+  color: white;
+}
+
+.policy-endorsement-btn-edit {
+  color: #10b981;
+  border-color: #10b981;
+}
+
+.policy-endorsement-btn-edit:hover {
+  background-color: #10b981;
+  color: white;
+}
+
+.policy-endorsement-btn-delete {
+  color: #ef4444;
+  border-color: #ef4444;
+}
+
+.policy-endorsement-btn-delete:hover {
+  background-color: #ef4444;
+  color: white;
+}
+
+/* Search Group Styles */
+.policy-endorsement-search-group {
+  margin-bottom: 1.5rem;
+}
+
+.policy-endorsement-search-label {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #374151;
+  margin-bottom: 0.5rem;
+}
+
+.policy-endorsement-search-wrapper {
+  position: relative;
+}
+
+.policy-endorsement-search-wrapper .policy-endorsement-search-icon {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  color: #64748b;
+  z-index: 10;
+}
+
+.policy-endorsement-search-wrapper .policy-endorsement-search-input {
+  width: 100%;
+  padding: 12px 12px 12px 44px;
+  border: 2px solid #e2e8f0;
+  border-radius: 8px;
+  font-size: 14px;
+  transition: all 0.2s ease;
+  background-color: #f8fafc;
+}
+
+.policy-endorsement-search-wrapper .policy-endorsement-search-input:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+  background-color: white;
+}
+
+/* Client Popup */
+.policy-endorsement-client-popup {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 0.75rem;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  max-height: 200px;
+  overflow-y: auto;
+  z-index: 50;
+  margin-top: 0.5rem;
+}
+
+.policy-endorsement-client-option {
+  padding: 0.75rem 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  border-bottom: 1px solid #f3f4f6;
+}
+
+.policy-endorsement-client-option:hover {
+  background-color: #f8fafc;
+}
+
+.policy-endorsement-client-option:last-child {
+  border-bottom: none;
+}
+
+.policy-endorsement-client-option-name {
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 0.25rem;
+}
+
+.policy-endorsement-client-option-details {
+  font-size: 0.75rem;
+  color: #6b7280;
+}
+
+/* Selected Customer Section */
+.policy-endorsement-customer-selected {
+  background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+  border: 2px solid #0ea5e9;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.policy-endorsement-customer-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.policy-endorsement-customer-title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #0c4a6e;
+  margin: 0;
+}
+
+.policy-endorsement-remove-customer-btn {
+  background: #ef4444;
+  color: white;
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.policy-endorsement-remove-customer-btn:hover {
+  background: #dc2626;
+  transform: scale(1.05);
+}
+
+.policy-endorsement-remove-icon {
+  width: 1rem;
+  height: 1rem;
+}
+
+.policy-endorsement-customer-info {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.policy-endorsement-customer-row {
+  display: contents;
+}
+
+.policy-endorsement-customer-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.policy-endorsement-customer-label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #64748b;
+}
+
+.policy-endorsement-customer-value {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #1e293b;
+}
+
+/* Selected Transaction Section */
+.policy-endorsement-transaction-selected {
+  background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+  border: 2px solid #f59e0b;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.policy-endorsement-transaction-header {
+  margin-bottom: 1rem;
+}
+
+.policy-endorsement-transaction-title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #92400e;
+  margin: 0;
+}
+
+.policy-endorsement-transaction-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.policy-endorsement-transaction-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.policy-endorsement-transaction-label {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #78350f;
+}
+
+.policy-endorsement-transaction-value {
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: #451a03;
+}
+
+/* Form Styles - Consolidated */
+.policy-endorsement-form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.policy-endorsement-form-row.single-column {
+  grid-template-columns: 1fr;
+}
+
+.policy-endorsement-form-row.three-columns {
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.policy-endorsement-form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.policy-endorsement-form-label {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #374151;
+  margin-bottom: 0.25rem;
+}
+
+.policy-endorsement-form-input,
+.policy-endorsement-form-select,
+.policy-endorsement-form-textarea {
+  padding: 0.75rem 1rem;
+  border: 2px solid #e2e8f0;
+  border-radius: 0.5rem;
+  font-size: 0.875rem;
+  transition: all 0.2s ease;
+  background-color: #f8fafc;
+}
+
+.policy-endorsement-form-input:focus,
+.policy-endorsement-form-select:focus,
+.policy-endorsement-form-textarea:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+  background-color: white;
+}
+
+.policy-endorsement-form-input.readonly {
+  background-color: rgba(243, 244, 246, 0.8);
+  color: #64748b;
+  cursor: not-allowed;
+}
+
+.policy-endorsement-form-input.readonly.positive {
+  background-color: rgba(220, 252, 231, 0.8);
+  color: #166534;
+  font-weight: 700;
+}
+
+.policy-endorsement-form-input.readonly.negative {
+  background-color: rgba(254, 226, 226, 0.8);
+  color: #991b1b;
+  font-weight: 700;
+}
+
+.policy-endorsement-form-textarea {
+  resize: vertical;
+  min-height: 80px;
+  font-family: inherit;
+}
+
+/* Category Form */
+.policy-endorsement-category-form {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.policy-endorsement-form-title {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: #1e3a8a;
+  margin: 0 0 1.5rem 0;
+  padding-bottom: 0.75rem;
+  border-bottom: 2px solid #e2e8f0;
+}
+
+/* Insert Section */
+.policy-endorsement-insert-section {
+  margin: 1.5rem 0;
+  display: flex;
+  justify-content: center;
+}
+
+.policy-endorsement-insert-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+  color: white;
+  border: none;
+  border-radius: 0.75rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.policy-endorsement-insert-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+.policy-endorsement-insert-icon {
+  width: 1rem;
+  height: 1rem;
+}
+
+/* Table Styles */
+.policy-endorsement-table-container {
+  margin-top: 1.5rem;
+}
+
+.policy-endorsement-table-title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #374151;
+  margin: 0 0 1rem 0;
+}
+
+.policy-endorsement-small-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 0.75rem;
+  overflow: hidden;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+}
+
+.policy-endorsement-small-table th {
+  background: linear-gradient(135deg, #4b5563 0%, #374151 100%);
+  color: white;
+  padding: 0.75rem;
+  text-align: left;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.policy-endorsement-small-table td {
+  padding: 0.75rem;
+  border-bottom: 1px solid #f3f4f6;
+  font-size: 0.875rem;
+  color: #374151;
+}
+
+.policy-endorsement-small-table tr:last-child td {
+  border-bottom: none;
+}
+
+.policy-endorsement-empty-table {
+  text-align: center;
+  color: #9ca3af;
+  font-style: italic;
+  padding: 2rem !important;
+}
+
+/* Action Button */
+.policy-endorsement-action-btn {
+  background: #ef4444;
+  color: white;
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.policy-endorsement-action-btn:hover {
+  background: #dc2626;
+  transform: scale(1.05);
+}
+
+.policy-endorsement-action-icon {
+  width: 1rem;
+  height: 1rem;
+}
+
+/* Remarks Section */
+.policy-endorsement-remarks-section {
+  margin-top: 1.5rem;
+}
+
+/* Save Button Section */
+.policy-endorsement-save-section {
+  margin-top: 2rem;
+  padding-top: 2rem;
+  border-top: 2px solid #e2e8f0;
+  display: flex;
+  justify-content: center;
+}
+
+.policy-endorsement-save-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1rem 2rem;
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  color: white;
+  border: none;
+  border-radius: 0.75rem;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 10px 15px -3px rgba(16, 185, 129, 0.3), 0 4px 6px -2px rgba(16, 185, 129, 0.2);
+  min-width: 250px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.policy-endorsement-save-btn:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 20px 25px -5px rgba(16, 185, 129, 0.4), 0 10px 10px -5px rgba(16, 185, 129, 0.3);
+  background: linear-gradient(135deg, #059669 0%, #047857 100%);
+}
+
+.policy-endorsement-save-btn:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.policy-endorsement-save-btn:disabled {
+  background: linear-gradient(135deg, #9ca3af 0%, #6b7280 100%);
+  cursor: not-allowed;
+  opacity: 0.6;
+  box-shadow: none;
+}
+
+.policy-endorsement-save-icon {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .policy-endorsement-content-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .policy-endorsement-form-row {
+    grid-template-columns: 1fr;
+  }
+  
+  .policy-endorsement-form-row.three-columns {
+    grid-template-columns: 1fr;
+  }
+  
+  .policy-endorsement-customer-info {
+    grid-template-columns: 1fr;
+  }
+  
+  .policy-endorsement-filters {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .policy-endorsement-search {
+    max-width: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .policy-endorsement-container {
+    padding: 0.5rem;
+  }
+  
+  .policy-endorsement-left-panel,
+  .policy-endorsement-right-panel {
+    padding: 1rem;
+  }
+  
+  .policy-endorsement-header {
+    padding: 1.5rem;
+  }
+  
+  .policy-endorsement-title {
+    font-size: 1.5rem;
+  }
+  
+  .policy-endorsement-subtitle {
+    font-size: 0.875rem;
+  }
+}

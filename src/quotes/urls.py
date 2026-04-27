@@ -1,0 +1,7 @@
+from django.urls import path
+from . import views
+
+urlpatterns = [
+    path('', views.quote_list, name='quote_list'),
+    path('<uuid:id>/', views.quote_detail, name='quote_detail'),
+]

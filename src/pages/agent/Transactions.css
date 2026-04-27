@@ -1,0 +1,369 @@
+/* Transactions Page Styles */
+.transactions-container {
+  padding: 2rem;
+  background-color: #f8fafc;
+  min-height: 100vh;
+}
+
+.transactions-header {
+  margin-bottom: 2rem;
+}
+
+.transactions-header h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin-bottom: 0.5rem;
+}
+
+.transactions-header p {
+  color: #64748b;
+  font-size: 1rem;
+}
+
+.transactions-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.search-filter-container {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  flex: 1;
+  max-width: 500px;
+}
+
+.search-bar {
+  position: relative;
+  flex: 1;
+}
+
+.search-bar input {
+  width: 100%;
+  padding: 0.75rem 1rem 0.75rem 2.5rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 0.5rem;
+  font-size: 0.875rem;
+  transition: all 0.2s;
+}
+
+.search-bar input:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.search-icon {
+  position: absolute;
+  left: 0.75rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #64748b;
+  size: 20;
+}
+
+.filter-toggle-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 0.5rem;
+  background: white;
+  color: #64748b;
+  cursor: pointer;
+  transition: all 0.2s;
+  white-space: nowrap;
+}
+
+.filter-toggle-btn:hover {
+  background-color: #f8fafc;
+  border-color: #cbd5e1;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.export-btn, .add-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+  border: none;
+}
+
+.export-btn {
+  background: white;
+  color: #64748b;
+  border: 1px solid #e2e8f0;
+}
+
+.export-btn:hover {
+  background-color: #f8fafc;
+  border-color: #cbd5e1;
+}
+
+.add-btn {
+  background: #3b82f6;
+  color: white;
+}
+
+.add-btn:hover {
+  background: #2563eb;
+}
+
+.filters-panel {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  padding: 1rem;
+  background: white;
+  border-radius: 0.5rem;
+  border: 1px solid #e2e8f0;
+  margin-bottom: 1.5rem;
+}
+
+.filter-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.filter-group label {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #374151;
+}
+
+.filter-group select {
+  padding: 0.5rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 0.375rem;
+  font-size: 0.875rem;
+  background: white;
+}
+
+.filter-group select:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.transactions-table-container {
+  background: white;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  border: 1px solid #e2e8f0;
+}
+
+.transactions-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.transactions-table th {
+  background-color: #f8fafc;
+  padding: 1rem;
+  text-align: left;
+  font-weight: 600;
+  color: #374151;
+  border-bottom: 1px solid #e2e8f0;
+  font-size: 0.875rem;
+  vertical-align: middle;
+  height: auto;
+  min-height: 50px;
+  line-height: 1.4;
+}
+
+.transactions-table td {
+  padding: 1rem;
+  border-bottom: 1px solid #e2e8f0;
+  font-size: 0.875rem;
+  vertical-align: middle;
+  height: auto;
+  min-height: 60px;
+  line-height: 1.4;
+}
+
+.transactions-table tr:hover {
+  background-color: #f8fafc;
+}
+
+.transaction-id {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 500;
+  color: #374151;
+}
+
+.client-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  justify-content: center;
+  min-height: 40px;
+}
+
+.client-name {
+  font-weight: 500;
+  color: #1e293b;
+}
+
+.client-email {
+  font-size: 0.75rem;
+  color: #64748b;
+}
+
+.policy-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  justify-content: center;
+  min-height: 40px;
+}
+
+.policy-number {
+  font-weight: 500;
+  color: #1e293b;
+}
+
+.policy-type {
+  font-size: 0.75rem;
+  color: #64748b;
+}
+
+.type-badge, .status-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+.amount {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 600;
+  color: #1e293b;
+}
+
+.payment-method {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #64748b;
+}
+
+.date {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #64748b;
+}
+
+.action-buttons-cell {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  justify-content: center;
+  min-height: 40px;
+}
+
+.view-btn, .edit-btn {
+  padding: 0.5rem;
+  border-radius: 0.375rem;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.view-btn {
+  background: #f1f5f9;
+  color: #0369a1;
+}
+
+.view-btn:hover {
+  background: #e2e8f0;
+}
+
+.edit-btn {
+  background: #fef3c7;
+  color: #d97706;
+}
+
+.edit-btn:hover {
+  background: #fde68a;
+}
+
+.no-results {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 2rem;
+  text-align: center;
+  color: #64748b;
+}
+
+.no-results svg {
+  margin-bottom: 1rem;
+  opacity: 0.5;
+}
+
+.no-results h3 {
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #374151;
+}
+
+.no-results p {
+  font-size: 0.875rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .transactions-container {
+    padding: 1rem;
+  }
+  
+  .transactions-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .search-filter-container {
+    max-width: none;
+  }
+  
+  .filters-panel {
+    grid-template-columns: 1fr;
+  }
+  
+  .transactions-table-container {
+    overflow-x: auto;
+  }
+  
+  .transactions-table {
+    min-width: 800px;
+  }
+}

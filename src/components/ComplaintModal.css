@@ -1,0 +1,345 @@
+/* ComplaintModal.css */
+.complaint-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    padding: 1rem;
+    backdrop-filter: blur(4px);
+}
+
+.complaint-modal {
+    background: white;
+    border-radius: 16px;
+    max-width: 800px;
+    width: 100%;
+    max-height: 90vh;
+    overflow-y: auto;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+    animation: modalSlideIn 0.3s ease-out;
+}
+
+@keyframes modalSlideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px) scale(0.95);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+.complaint-modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 2rem;
+    border-bottom: 1px solid #e9ecef;
+    background: linear-gradient(135deg, #dc2626 0%, #b91c1c 100%);
+    color: white;
+    border-radius: 16px 16px 0 0;
+}
+
+.complaint-modal-title {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.complaint-modal-title h2 {
+    margin: 0;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.complaint-modal-close {
+    background: rgba(255, 255, 255, 0.2);
+    border: none;
+    border-radius: 8px;
+    padding: 0.5rem;
+    cursor: pointer;
+    color: white;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.complaint-modal-close:hover:not(:disabled) {
+    background: rgba(255, 255, 255, 0.3);
+    transform: scale(1.05);
+}
+
+.complaint-modal-close:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.complaint-modal-content {
+    padding: 2rem;
+}
+
+.complaint-success {
+    text-align: center;
+    padding: 3rem 2rem;
+}
+
+.success-icon {
+    background: #10b981;
+    color: white;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+    animation: successPulse 2s infinite;
+}
+
+@keyframes successPulse {
+
+    0%,
+    100% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.4);
+    }
+
+    50% {
+        transform: scale(1.05);
+        box-shadow: 0 0 0 20px rgba(16, 185, 129, 0);
+    }
+}
+
+.complaint-success h3 {
+    color: #10b981;
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.complaint-success p {
+    color: #6b7280;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+.reference-number {
+    background: #f3f4f6;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    font-family: 'Courier New', monospace;
+    font-weight: 600;
+    color: #374151;
+    display: inline-block;
+}
+
+.complaint-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.complaint-form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.form-group.full-width {
+    grid-column: 1 / -1;
+}
+
+.form-group label {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 500;
+    color: #374151;
+    font-size: 0.875rem;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    padding: 0.75rem 1rem;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    font-size: 0.875rem;
+    transition: all 0.2s ease;
+    background: white;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #dc2626;
+    box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.1);
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 120px;
+    font-family: inherit;
+}
+
+.radio-group {
+    display: flex;
+    gap: 1.5rem;
+    margin-top: 0.5rem;
+}
+
+.radio-label {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+    font-size: 0.875rem;
+    color: #374151;
+}
+
+.radio-label input[type="radio"] {
+    width: auto;
+    margin: 0;
+}
+
+.complaint-form-footer {
+    display: flex;
+    gap: 1rem;
+    justify-content: flex-end;
+    margin-top: 1rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid #e9ecef;
+}
+
+.complaint-btn {
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    font-weight: 500;
+    font-size: 0.875rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 120px;
+}
+
+.complaint-btn-primary {
+    background: linear-gradient(135deg, #dc2626 0%, #b91c1c 100%);
+    color: white;
+}
+
+.complaint-btn-primary:hover:not(:disabled) {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(220, 38, 38, 0.3);
+}
+
+.complaint-btn-secondary {
+    background: #f3f4f6;
+    color: #6b7280;
+    border: 1px solid #d1d5db;
+}
+
+.complaint-btn-secondary:hover:not(:disabled) {
+    background: #e5e7eb;
+    color: #374151;
+}
+
+.complaint-btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none !important;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .complaint-modal {
+        margin: 1rem;
+        max-height: 95vh;
+    }
+
+    .complaint-modal-header {
+        padding: 1rem 1.5rem;
+    }
+
+    .complaint-modal-title h2 {
+        font-size: 1.25rem;
+    }
+
+    .complaint-modal-content {
+        padding: 1.5rem;
+    }
+
+    .complaint-form-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .radio-group {
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+
+    .complaint-form-footer {
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+
+    .complaint-btn {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .complaint-modal-overlay {
+        padding: 0;
+    }
+
+    .complaint-modal {
+        margin: 0;
+        height: 100%;
+        max-height: 100vh;
+        border-radius: 0;
+    }
+
+    .complaint-modal-header {
+        border-radius: 0;
+        position: sticky;
+        top: 0;
+        z-index: 10;
+    }
+
+    .complaint-modal-content {
+        padding: 1rem;
+        padding-bottom: 8rem;
+        /* Increased padding to avoid button overlap */
+    }
+
+    .complaint-form-footer {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: white;
+        padding: 1rem;
+        margin: 0;
+        z-index: 10;
+    }
+}

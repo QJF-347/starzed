@@ -1,0 +1,1 @@
+web: cd src && gunicorn starzed_backend.wsgi_minimal:application --bind 0.0.0.0:$PORT --workers 1 --timeout 30

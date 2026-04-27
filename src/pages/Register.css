@@ -1,0 +1,138 @@
+/* Register.css */
+.register-container {
+    min-height: calc(100vh - 80px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, var(--bg-slate) 0%, #e2e8f0 100%);
+    padding: var(--spacing-2xl) var(--spacing-md);
+    margin-top: 80px;
+}
+
+.register-box {
+    background: var(--bg-white);
+    width: 100%;
+    max-width: 480px;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-xl);
+    padding: var(--spacing-2xl);
+    animation: slideUpFade 0.5s ease-out;
+}
+
+.register-header {
+    text-align: center;
+    margin-bottom: var(--spacing-2xl);
+    position: relative;
+    padding-top: 30px;
+}
+
+.register-header .back-link {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: var(--primary);
+    text-decoration: none;
+    transition: var(--transition);
+    padding: 8px 12px;
+    border-radius: var(--radius-md);
+    background: rgba(107, 33, 168, 0.1);
+    border: 1px solid rgba(107, 33, 168, 0.2);
+}
+
+.register-header .back-link:hover {
+    color: var(--text-white);
+    background: var(--primary);
+    transform: translateX(-4px);
+    box-shadow: 0 4px 12px rgba(107, 33, 168, 0.3);
+}
+
+.register-header h2 {
+    font-size: 1.75rem;
+    font-weight: 800;
+    color: var(--bg-dark);
+    margin-bottom: var(--spacing-xs);
+    margin-top: 1rem;
+}
+
+.register-header p {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin-top: var(--spacing-sm);
+}
+
+.register-error {
+    background: #fee2e2;
+    color: #b91c1c;
+    padding: var(--spacing-sm) var(--spacing-md);
+    border-radius: var(--radius-md);
+    font-size: 0.875rem;
+    margin-bottom: var(--spacing-lg);
+    text-align: center;
+    border: 1px solid #f87171;
+}
+
+.register-form .input-group {
+    margin-bottom: 1.5rem;
+}
+
+.register-button {
+    width: 100%;
+    background: var(--primary);
+    color: var(--text-white);
+    border: none;
+    padding: 0.875rem;
+    border-radius: var(--radius-md);
+    font-size: 1rem;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+    transition: var(--transition);
+    box-shadow: 0 4px 6px -1px rgba(107, 33, 168, 0.2);
+    margin-top: var(--spacing-lg);
+}
+
+.register-button:hover:not(:disabled) {
+    background: var(--primary-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 15px -3px rgba(107, 33, 168, 0.3);
+}
+
+.register-button:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+
+.login-prompt {
+    margin-top: 2rem;
+    text-align: center;
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    line-height: 1.5;
+    padding-top: var(--spacing-md);
+    border-top: 1px solid #e5e7eb;
+}
+
+.login-prompt a {
+    color: var(--primary);
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.login-prompt a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 480px) {
+    .register-box {
+        padding: var(--spacing-xl);
+    }
+}

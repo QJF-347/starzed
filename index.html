@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self'; frame-src 'self' https://www.google.com/;"> -->
+  <link rel="icon" type="image/png" href="/favicon.png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>starzed</title>
+  <style>
+    /* Ensure Zoho widget is visible */
+    [id*="zsiq"], [class*="zsiq"], [data-testid*="salesiq"] {
+      display: block !important;
+      visibility: visible !important;
+      opacity: 1 !important;
+      z-index: 999999 !important;
+    }
+  </style>
+  <script>window.$zoho=window.$zoho || {};$zoho.salesiq=$zoho.salesiq||{ready:function(){}}</script><script id="zsiqscript" src="https://salesiq.zohopublic.com/widget?wc=siq3ca97c664808640d51b29a09d1e2788b1d3bd5924785c7654c03178a315b50941855ca718a6ea54400df767394dfa3b7" defer></script>
+</head>
+
+<body>
+  <div id="root"></div>
+  <script type="module" src="/src/main.jsx"></script>
+</body>
+
+</html>

@@ -1,0 +1,716 @@
+/* Policy Renewal Note Styles - Following AgentFiles Theme */
+
+.policy-renewal-note-container {
+  padding: 2rem;
+  background-color: #f8fafc;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header Section */
+.policy-renewal-note-header {
+  margin-bottom: 2rem;
+}
+
+.policy-renewal-note-header-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+}
+
+.policy-renewal-note-header-left {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.policy-renewal-note-back-btn {
+  display: flex;
+  align-items: center;
+  color: #64748b;
+  text-decoration: none;
+  font-size: 0.875rem;
+  font-weight: 500;
+  transition: color 0.2s ease;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.policy-renewal-note-back-btn:hover {
+  color: #3b82f6;
+}
+
+.policy-renewal-note-back-icon {
+  width: 1rem;
+  height: 1rem;
+}
+
+.policy-renewal-note-title {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #1e293b;
+  margin: 0;
+  background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.policy-renewal-note-subtitle {
+  color: #64748b;
+  font-size: 1.125rem;
+  font-weight: 400;
+  margin: 0;
+}
+
+.policy-renewal-note-header-actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.policy-renewal-note-btn {
+  display: flex;
+  align-items: center;
+  padding: 0.875rem 1.75rem;
+  border-radius: 0.75rem;
+  border: 1px solid #e2e8f0;
+  background-color: white;
+  color: #64748b;
+  font-size: 0.875rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  gap: 0.625rem;
+}
+
+.policy-renewal-note-btn:hover {
+  background-color: #f8fafc;
+  border-color: #cbd5e1;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.policy-renewal-note-btn.primary {
+  background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+  color: white;
+  border-color: transparent;
+  box-shadow: 0 4px 14px rgba(59, 130, 246, 0.4);
+}
+
+.policy-renewal-note-btn.primary:hover {
+  background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+  box-shadow: 0 6px 20px rgba(59, 130, 246, 0.5);
+}
+
+.policy-renewal-note-btn.secondary {
+  background: #f8fafc;
+  color: #64748b;
+  border-color: #e2e8f0;
+}
+
+.policy-renewal-note-btn.secondary:hover {
+  background: #f1f5f9;
+  border-color: #cbd5e1;
+}
+
+.policy-renewal-note-btn-icon {
+  width: 1.125rem;
+  height: 1.125rem;
+}
+
+/* Filter Section */
+.policy-renewal-note-filter-section {
+  margin-bottom: 2rem;
+}
+
+.policy-renewal-note-filter-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+  background: white;
+  padding: 1.5rem;
+  border-radius: 0.75rem;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.policy-renewal-note-filter-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.policy-renewal-note-filter-label {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #374151;
+}
+
+.policy-renewal-note-search-wrapper {
+  position: relative;
+}
+
+.policy-renewal-note-search-icon {
+  position: absolute;
+  left: 0.75rem;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 1rem;
+  height: 1rem;
+  color: #64748b;
+  z-index: 1;
+}
+
+.policy-renewal-note-search-input,
+.policy-renewal-note-filter-select {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 1px solid #d1d5db;
+  border-radius: 0.375rem;
+  font-size: 0.875rem;
+  background-color: white;
+  transition: all 0.2s ease;
+}
+
+.policy-renewal-note-search-input {
+  padding-left: 2.5rem;
+}
+
+.policy-renewal-note-search-input:focus,
+.policy-renewal-note-filter-select:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+/* Stats Grid */
+.policy-renewal-note-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.policy-renewal-note-stat-card {
+  background: white;
+  border-radius: 0.75rem;
+  padding: 1rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e2e8f0;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.policy-renewal-note-stat-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #3b82f6 0%, #2563eb 100%);
+}
+
+.policy-renewal-note-stat-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.policy-renewal-note-stat-card:nth-child(1)::before {
+  background: linear-gradient(90deg, #3b82f6 0%, #2563eb 100%);
+}
+
+.policy-renewal-note-stat-card:nth-child(2)::before {
+  background: linear-gradient(90deg, #10b981 0%, #059669 100%);
+}
+
+.policy-renewal-note-stat-card:nth-child(3)::before {
+  background: linear-gradient(90deg, #f97316 0%, #ea580c 100%);
+}
+
+.policy-renewal-note-stat-card:nth-child(4)::before {
+  background: linear-gradient(90deg, #8b5cf6 0%, #7c3aed 100%);
+}
+
+.policy-renewal-note-stat-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.policy-renewal-note-stat-info {
+  flex: 1;
+}
+
+.policy-renewal-note-stat-title {
+  font-size: 0.75rem;
+  color: #64748b;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+  text-transform: uppercase;
+  letter-spacing: 0.025em;
+}
+
+.policy-renewal-note-stat-value {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: #1e293b;
+  margin-bottom: 0.25rem;
+  line-height: 1;
+}
+
+.policy-renewal-note-stat-icon-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 0.5rem;
+  flex-shrink: 0;
+}
+
+.policy-renewal-note-stat-icon-wrapper.blue {
+  background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 100%);
+  color: #1d4ed8;
+}
+
+.policy-renewal-note-stat-icon-wrapper.green {
+  background: linear-gradient(135deg, #d1fae5 0%, #a7f3d0 100%);
+  color: #059669;
+}
+
+.policy-renewal-note-stat-icon-wrapper.orange {
+  background: linear-gradient(135deg, #fed7aa 0%, #fdba74 100%);
+  color: #ea580c;
+}
+
+.policy-renewal-note-stat-icon-wrapper.red {
+  background: linear-gradient(135deg, #fee2e2 0%, #fecaca 100%);
+  color: #dc2626;
+}
+
+.policy-renewal-note-stat-icon {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+/* Table Styles */
+.policy-renewal-note-table-container {
+  background: white;
+  border-radius: 0.75rem;
+  border: 1px solid #e2e8f0;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.policy-renewal-note-table-wrapper {
+  overflow-x: auto;
+  overflow-y: auto;
+  flex: 1;
+  position: relative;
+}
+
+.policy-renewal-note-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.875rem;
+}
+
+.policy-renewal-note-table-head {
+  background: linear-gradient(135deg, #f1f5f9 0%, #e2e8f0 100%);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.policy-renewal-note-table-header {
+  padding: 0.75rem 1rem;
+  text-align: left;
+  font-weight: 700;
+  color: #374151;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border-bottom: 2px solid #e2e8f0;
+  white-space: nowrap;
+}
+
+.policy-renewal-note-table-body {
+  background: white;
+}
+
+.policy-renewal-note-table-row {
+  border-bottom: 1px solid #f1f5f9;
+  transition: all 0.2s ease;
+}
+
+.policy-renewal-note-table-row:hover {
+  background-color: #f8fafc;
+}
+
+.policy-renewal-note-table-cell {
+  padding: 0.75rem 1rem;
+  vertical-align: middle;
+  border-bottom: 1px solid #f1f5f9;
+  white-space: nowrap;
+  font-size: 0.8rem;
+}
+
+.policy-renewal-note-client-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.policy-renewal-note-client-name {
+  font-weight: 600;
+  color: #1e293b;
+  font-size: 0.8rem;
+}
+
+.policy-renewal-note-policy-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.policy-renewal-note-policy-number {
+  font-weight: 600;
+  color: #1e293b;
+  font-size: 0.8rem;
+}
+
+.policy-renewal-note-renewal-number {
+  font-size: 0.7rem;
+  color: #64748b;
+  font-weight: 400;
+}
+
+.policy-renewal-note-product-type {
+  font-size: 0.7rem;
+  color: #64748b;
+  font-weight: 400;
+  max-width: 150px;
+  white-space: normal;
+}
+
+.policy-renewal-note-note-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.policy-renewal-note-date {
+  font-size: 0.7rem;
+  color: #64748b;
+  font-weight: 600;
+  margin-bottom: 0.125rem;
+}
+
+.policy-renewal-note-type {
+  font-weight: 600;
+  color: #1e293b;
+  font-size: 0.8rem;
+}
+
+.policy-renewal-note-subject {
+  font-size: 0.7rem;
+  color: #1e293b;
+  font-weight: 500;
+  margin-bottom: 0.125rem;
+}
+
+.policy-renewal-note-content {
+  font-size: 0.7rem;
+  color: #64748b;
+  font-weight: 400;
+  max-width: 200px;
+  white-space: normal;
+  line-height: 1.3;
+}
+
+.policy-renewal-note-followup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.125rem;
+  margin-top: 0.25rem;
+}
+
+.policy-renewal-note-followup-label {
+  font-size: 0.65rem;
+  color: #64748b;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.025em;
+}
+
+.policy-renewal-note-followup-date {
+  font-size: 0.7rem;
+  color: #1e293b;
+  font-weight: 500;
+}
+
+.policy-renewal-note-status-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.policy-renewal-note-priority {
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 0.25rem 0.75rem;
+  border-radius: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.025em;
+  margin-bottom: 0.5rem;
+}
+
+.priority-high {
+  color: #dc2626;
+  background: linear-gradient(135deg, #fee2e2 0%, #fecaca 100%);
+}
+
+.priority-medium {
+  color: #f97316;
+  background: linear-gradient(135deg, #fed7aa 0%, #fdba74 100%);
+}
+
+.priority-low {
+  color: #059669;
+  background: linear-gradient(135deg, #d1fae5 0%, #a7f3d0 100%);
+}
+
+.policy-renewal-note-status-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.status-icon {
+  width: 1rem;
+  height: 1rem;
+}
+
+.status-icon.completed {
+  color: #059669;
+}
+
+.status-icon.pending {
+  color: #f97316;
+}
+
+.status-icon.processing {
+  color: #3b82f6;
+}
+
+.status-icon.overdue {
+  color: #dc2626;
+}
+
+.policy-renewal-note-status-text {
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.status-completed {
+  color: #059669;
+}
+
+.status-pending {
+  color: #f97316;
+}
+
+.status-processing {
+  color: #3b82f6;
+}
+
+.status-overdue {
+  color: #dc2626;
+}
+
+.policy-renewal-note-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.policy-renewal-note-action-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem;
+  border-radius: 0.375rem;
+  border: 1px solid #e2e8f0;
+  background: white;
+  color: #64748b;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.policy-renewal-note-action-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.policy-renewal-note-action-btn.view:hover {
+  background-color: #dbeafe;
+  color: #1d4ed8;
+  border-color: #1d4ed8;
+}
+
+.policy-renewal-note-action-btn.edit:hover {
+  background-color: #fbbf24;
+  color: #d97706;
+  border-color: #d97706;
+}
+
+.policy-renewal-note-action-icon {
+  width: 0.875rem;
+  height: 0.875rem;
+}
+
+/* Modal Styles */
+.policy-renewal-note-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.policy-renewal-note-modal {
+  background: white;
+  border-radius: 0.75rem;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  max-width: 600px;
+  width: 90%;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+.policy-renewal-note-modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.policy-renewal-note-modal-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin: 0;
+}
+
+.policy-renewal-note-modal-close {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem;
+  border-radius: 0.375rem;
+  border: none;
+  background: transparent;
+  color: #64748b;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.policy-renewal-note-modal-close:hover {
+  background-color: #f1f5f9;
+  color: #374151;
+}
+
+.policy-renewal-note-modal-close-icon {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.policy-renewal-note-modal-body {
+  padding: 1.5rem;
+}
+
+.policy-renewal-note-view-group {
+  margin-bottom: 1.5rem;
+}
+
+.policy-renewal-note-view-label {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #374151;
+  margin-bottom: 0.5rem;
+}
+
+.policy-renewal-note-view-value {
+  font-size: 0.875rem;
+  font-weight: 400;
+  color: #1e293b;
+  margin: 0;
+  padding: 0.75rem 1rem;
+  background-color: #f8fafc;
+  border-radius: 0.375rem;
+  border: 1px solid #e2e8f0;
+}
+
+.policy-renewal-note-modal-footer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 1rem;
+  padding: 1.5rem;
+  border-top: 1px solid #e2e8f0;
+}
+
+@media (max-width: 768px) {
+  .policy-renewal-note-container {
+    padding: 1rem;
+  }
+  
+  .policy-renewal-note-header-content {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+  
+  .policy-renewal-note-filter-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .policy-renewal-note-stats-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .policy-renewal-note-modal {
+    width: 95%;
+    max-height: 95vh;
+  }
+  
+  .policy-renewal-note-table {
+    font-size: 0.75rem;
+  }
+  
+  .policy-renewal-note-table-header {
+    padding: 0.5rem;
+    font-size: 0.65rem;
+  }
+  
+  .policy-renewal-note-table-cell {
+    padding: 0.5rem;
+    font-size: 0.7rem;
+  }
+}

@@ -1,0 +1,861 @@
+/* Enhanced Table Styles for Agent Portal */
+
+/* Base Table Container Styles */
+*[class*="table-container"] {
+  background: white;
+  border-radius: 0.75rem;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+}
+
+/* Table Wrapper with Fixed Height and Scrolling */
+*[class*="table-wrapper"] {
+  overflow-x: auto;
+  overflow-y: auto;
+  position: relative;
+  max-height: 500px; /* Fixed height for scrollability */
+  border-radius: 0.75rem;
+  /* Enhanced horizontal scrolling */
+  scrollbar-width: thin;
+  -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+}
+
+/* Ensure table maintains proper width for horizontal scrolling */
+*[class*="table-wrapper"] > *[class*="table"] {
+  min-width: 100%;
+  width: max-content;
+}
+
+/* Enhanced Table Base Styles */
+*[class*="table"] {
+  min-width: 100%;
+  width: max-content; /* Allow table to expand to content width */
+  border-collapse: collapse;
+  font-size: 0.875rem;
+  background: white;
+  table-layout: auto; /* Auto layout for better content handling */
+}
+
+/* Ensure table cells don't shrink below content width */
+*[class*="table-cell"] {
+  min-width: fit-content;
+  width: auto;
+  white-space: nowrap; /* Prevent text wrapping by default */
+}
+
+/* Sticky Table Headers */
+*[class*="table-head"] {
+  background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+*[class*="table-header"] {
+  padding: 1rem;
+  text-align: left;
+  font-weight: 700;
+  color: #374151;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.025em;
+  border-bottom: 2px solid #e2e8f0;
+  white-space: nowrap;
+  background: inherit;
+  position: sticky;
+  top: 0;
+  z-index: 20;
+}
+
+/* Table Body Styles */
+*[class*="table-body"] {
+  background: white;
+}
+
+*[class*="table-row"] {
+  border-bottom: 1px solid #f1f5f9;
+  transition: all 0.2s ease;
+  animation: fadeInRow 0.3s ease-out;
+}
+
+*[class*="table-row"]:hover {
+  background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+  transform: scale(1.005);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+*[class*="table-row"]:last-child {
+  border-bottom: none;
+}
+
+/* Table Cell Styles */
+*[class*="table-cell"] {
+  padding: 1rem;
+  vertical-align: middle;
+  border-bottom: 1px solid #f1f5f9;
+  color: #374151;
+  font-size: 0.875rem;
+  line-height: 1.5;
+}
+
+*[class*="table-cell-actions"] {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  justify-content: flex-start;
+  white-space: nowrap;
+}
+
+/* Enhanced Scrollbar Styles */
+*[class*="table-wrapper"]::-webkit-scrollbar {
+  width: 12px;
+  height: 12px; /* Ensure horizontal scrollbar is visible */
+}
+
+*[class*="table-wrapper"]::-webkit-scrollbar-track {
+  background: #f8fafc;
+  border-radius: 6px;
+  border: 1px solid #e2e8f0;
+}
+
+*[class*="table-wrapper"]::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, #cbd5e1 0%, #94a3b8 100%);
+  border-radius: 6px;
+  border: 2px solid #f8fafc;
+  transition: all 0.2s ease;
+  min-height: 20px; /* Ensure thumb is visible */
+}
+
+*[class*="table-wrapper"]::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(135deg, #94a3b8 0%, #64748b 100%);
+  border-color: #e2e8f0;
+}
+
+*[class*="table-wrapper"]::-webkit-scrollbar-corner {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+}
+
+/* Firefox scrollbar styling */
+*[class*="table-wrapper"] {
+  scrollbar-width: thin;
+  scrollbar-color: #94a3b8 #f8fafc;
+}
+
+/* Add scroll indicator for better UX */
+*[class*="table-wrapper"]::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 40px;
+  height: 40px;
+  background: linear-gradient(135deg, transparent 0%, rgba(148, 163, 184, 0.1) 100%);
+  pointer-events: none;
+  border-radius: 0 0 0.75rem 0;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+*[class*="table-wrapper"]:hover::after {
+  opacity: 1;
+}
+
+/* Pagination Container */
+.pagination-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem;
+  background: #f8fafc;
+  border-top: 1px solid #e2e8f0;
+  border-radius: 0 0 0.75rem 0.75rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.pagination-info {
+  color: #64748b;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.pagination-controls {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.pagination-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border: 1px solid #e2e8f0;
+  background: white;
+  color: #64748b;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.pagination-btn:hover:not(:disabled) {
+  background: #3b82f6;
+  color: white;
+  border-color: #3b82f6;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(59, 130, 246, 0.2);
+}
+
+.pagination-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.pagination-btn.active {
+  background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+  color: white;
+  border-color: transparent;
+  box-shadow: 0 2px 8px rgba(59, 130, 246, 0.3);
+}
+
+.pagination-ellipsis {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  color: #64748b;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+/* Table Loading State */
+.table-loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem;
+  color: #64748b;
+  font-size: 0.875rem;
+}
+
+.table-loading-spinner {
+  width: 24px;
+  height: 24px;
+  border: 2px solid #e2e8f0;
+  border-top: 2px solid #3b82f6;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-right: 0.5rem;
+}
+
+/* Table Empty State */
+.table-empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 2rem;
+  color: #64748b;
+  text-align: center;
+}
+
+.table-empty-icon {
+  width: 64px;
+  height: 64px;
+  background: #f1f5f9;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+  color: #94a3b8;
+}
+
+.table-empty-title {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #374151;
+  margin-bottom: 0.5rem;
+}
+
+.table-empty-description {
+  font-size: 0.875rem;
+  color: #64748b;
+  max-width: 400px;
+  line-height: 1.5;
+}
+
+/* Animations */
+@keyframes fadeInRow {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  *[class*="table-wrapper"] {
+    max-height: 400px;
+    /* Enhanced mobile scrolling */
+    -webkit-overflow-scrolling: touch;
+    overflow-x: scroll;
+    overflow-y: scroll;
+  }
+  
+  /* Ensure table maintains proper width for horizontal scrolling */
+  *[class*="table-wrapper"] > *[class*="table"] {
+    min-width: 800px; /* Ensure minimum width for horizontal scroll */
+    width: max-content;
+  }
+  
+  /* Prevent text overflow and ensure proper cell behavior */
+  *[class*="table-cell"] {
+    word-wrap: break-word;
+    word-break: break-word;
+    overflow-wrap: break-word;
+    hyphens: auto;
+    max-width: 200px;
+    min-width: 80px;
+    white-space: nowrap; /* Keep text on single line for horizontal scroll */
+  }
+  
+  /* Handle long text content in cells */
+  *[class*="table-cell"] > div {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    max-width: 100%;
+  }
+  
+  /* For multi-line content, allow wrapping but limit height */
+  *[class*="table-cell"].multiline {
+    white-space: normal;
+    max-height: 60px;
+    overflow-y: auto;
+  }
+  
+  /* Adjust table layout for better mobile experience */
+  *[class*="table"] {
+    table-layout: auto;
+    min-width: 800px; /* Ensure horizontal scrolling on mobile */
+  }
+  
+  /* Reduce padding on smaller screens */
+  *[class*="table-header"] {
+    padding: 0.75rem 0.5rem;
+    font-size: 0.75rem;
+    white-space: nowrap;
+    position: sticky;
+    left: 0;
+    z-index: 25;
+  }
+  
+  *[class*="table-cell"] {
+    padding: 0.75rem 0.5rem;
+    font-size: 0.75rem;
+  }
+  
+  .pagination-container {
+    padding: 1rem;
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .pagination-controls {
+    justify-content: center;
+  }
+  
+  /* Enhanced mobile scrollbar */
+  *[class*="table-wrapper"]::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+  
+  *[class*="table-wrapper"]::-webkit-scrollbar-thumb {
+    min-height: 16px;
+  }
+}
+
+/* Column Width Controls for Receipts and Payments Tables */
+.customers-receipts-table th:first-child,
+.customers-receipts-table td:first-child {
+  width: 120px;
+  min-width: 120px;
+  max-width: 120px;
+}
+
+.premium-table th:first-child,
+.premium-table td:first-child {
+  width: 150px;
+  min-width: 150px;
+  max-width: 150px;
+}
+
+.premium-payment-logs-table th:first-child,
+.premium-payment-logs-table td:first-child {
+  width: 100px;
+  min-width: 100px;
+  max-width: 100px;
+}
+
+.insurer-payment-table th:first-child,
+.insurer-payment-table td:first-child {
+  width: 150px;
+  min-width: 150px;
+  max-width: 150px;
+}
+
+/* Action column width controls */
+*[class*="table"] th:last-child,
+*[class*="table"] td:last-child {
+  width: 100px;
+  min-width: 100px;
+  max-width: 100px;
+  text-align: center;
+}
+
+/* Specific column widths for better balance */
+.customers-receipts-table th:nth-child(2),
+.customers-receipts-table td:nth-child(2) {
+  width: 180px;
+  min-width: 180px;
+}
+
+.customers-receipts-table th:nth-child(4),
+.customers-receipts-table td:nth-child(4) {
+  width: 130px;
+  min-width: 130px;
+}
+
+.customers-receipts-table th:nth-child(5),
+.customers-receipts-table td:nth-child(5) {
+  width: 100px;
+  min-width: 100px;
+}
+
+/* Premium table specific widths */
+.premium-table th:nth-child(3),
+.premium-table td:nth-child(3) {
+  width: 120px;
+  min-width: 120px;
+}
+
+.premium-table th:nth-child(5),
+.premium-table td:nth-child(5) {
+  width: 120px;
+  min-width: 120px;
+}
+
+.premium-table th:nth-child(8),
+.premium-table td:nth-child(8),
+.premium-table th:nth-child(9),
+.premium-table td:nth-child(9),
+.premium-table th:nth-child(10),
+.premium-table td:nth-child(10) {
+  width: 90px;
+  min-width: 90px;
+}
+
+/* Premium Payment Logs table specific widths */
+.premium-payment-logs-table th:nth-child(2),
+.premium-payment-logs-table td:nth-child(2) {
+  width: 100px;
+  min-width: 100px;
+}
+
+.premium-payment-logs-table th:nth-child(3),
+.premium-payment-logs-table td:nth-child(3) {
+  width: 120px;
+  min-width: 120px;
+}
+
+.premium-payment-logs-table th:nth-child(10),
+.premium-payment-logs-table td:nth-child(10) {
+  width: 90px;
+  min-width: 90px;
+}
+
+/* Insurer Payment table specific widths */
+.insurer-payment-table th:nth-child(2),
+.insurer-payment-table td:nth-child(2) {
+  width: 100px;
+  min-width: 100px;
+}
+
+.insurer-payment-table th:nth-child(4),
+.insurer-payment-table td:nth-child(4) {
+  width: 120px;
+  min-width: 120px;
+}
+
+.insurer-payment-table th:nth-child(7),
+.insurer-payment-table td:nth-child(7),
+.insurer-payment-table th:nth-child(8),
+.insurer-payment-table td:nth-child(8) {
+  width: 100px;
+  min-width: 100px;
+}
+
+@media (max-width: 768px) {
+  *[class*="table-header"] {
+    padding: 0.75rem 0.5rem;
+    font-size: 0.75rem;
+  }
+  
+  *[class*="table-cell"] {
+    padding: 0.75rem 0.5rem;
+    font-size: 0.75rem;
+  }
+  
+  .pagination-container {
+    padding: 1rem;
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .pagination-controls {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  *[class*="table-wrapper"] {
+    max-height: 300px;
+    /* Enhanced touch scrolling for very small screens */
+    -webkit-overflow-scrolling: touch;
+    overflow-x: scroll;
+    overflow-y: scroll;
+  }
+  
+  /* Ensure table maintains proper width for horizontal scrolling */
+  *[class*="table-wrapper"] > *[class*="table"] {
+    min-width: 700px; /* Slightly smaller minimum for very small screens */
+    width: max-content;
+  }
+  
+  /* More aggressive text handling for very small screens */
+  *[class*="table-cell"] {
+    word-wrap: break-word;
+    word-break: break-word;
+    overflow-wrap: break-word;
+    hyphens: auto;
+    max-width: 150px;
+    min-width: 60px;
+    padding: 0.5rem 0.25rem;
+    font-size: 0.7rem;
+    white-space: nowrap; /* Keep text on single line for horizontal scroll */
+  }
+  
+  /* Handle long text content in cells */
+  *[class*="table-cell"] > div {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    max-width: 100%;
+    line-height: 1.2;
+  }
+  
+  /* For multi-line content, allow wrapping but limit height */
+  *[class*="table-cell"].multiline {
+    white-space: normal;
+    max-height: 40px;
+    overflow-y: auto;
+    font-size: 0.65rem;
+  }
+  
+  /* Ensure table maintains minimum width for usability */
+  *[class*="table"] {
+    table-layout: auto;
+    min-width: 700px; /* Ensure horizontal scrolling on very small screens */
+  }
+  
+  *[class*="table-header"] {
+    padding: 0.5rem 0.25rem;
+    font-size: 0.7rem;
+    white-space: nowrap;
+    position: sticky;
+    left: 0;
+    z-index: 25;
+  }
+  
+  /* Action buttons stack vertically on small screens */
+  *[class*="table-cell-actions"] {
+    flex-direction: column;
+    gap: 0.25rem;
+    align-items: center;
+  }
+  
+  *[class*="action-btn"] {
+    min-width: 28px;
+    height: 28px;
+    padding: 0.25rem;
+  }
+  
+  .pagination-btn {
+    width: 32px;
+    height: 32px;
+    font-size: 0.75rem;
+  }
+  
+  /* Hide some less important columns on very small screens */
+  *[class*="table"] th:nth-child(4),
+  *[class*="table"] td:nth-child(4) {
+    display: none;
+  }
+  
+  /* Exception for tables where all columns are important */
+  .critical-table *[class*="table"] th:nth-child(4),
+  .critical-table *[class*="table"] td:nth-child(4) {
+    display: table-cell;
+  }
+  
+  /* Very small screen scrollbar */
+  *[class*="table-wrapper"]::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  
+  *[class*="table-wrapper"]::-webkit-scrollbar-thumb {
+    min-height: 12px;
+  }
+}
+
+/* Print Styles */
+@media print {
+  *[class*="table-wrapper"] {
+    max-height: none;
+    overflow: visible;
+  }
+  
+  *[class*="table-head"] {
+    position: static;
+  }
+  
+  .pagination-container {
+    display: none;
+  }
+}
+
+/* Utility classes for specific content types */
+.text-ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.text-break {
+  word-wrap: break-word;
+  word-break: break-word;
+  overflow-wrap: break-word;
+  hyphens: auto;
+}
+
+.text-clamp-2 {
+  display: -webkit-box;
+  display: -moz-box;
+  display: box;
+  -webkit-line-clamp: 2;
+  -moz-line-clamp: 2;
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
+  -moz-box-orient: vertical;
+  box-orient: vertical;
+  overflow: hidden;
+}
+
+.text-clamp-3 {
+  display: -webkit-box;
+  display: -moz-box;
+  display: box;
+  -webkit-line-clamp: 3;
+  -moz-line-clamp: 3;
+  line-clamp: 3;
+  -webkit-box-orient: vertical;
+  -moz-box-orient: vertical;
+  box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Specific fixes for agent portal tables */
+.motor-table-cell,
+.product-file-table-cell,
+.clients-table-cell,
+.policies-table-cell,
+.transactions-table-cell {
+  position: relative;
+  overflow: hidden;
+}
+
+.motor-table-cell > div,
+.product-file-table-cell > div,
+.clients-table-cell > div,
+.policies-table-cell > div,
+.transactions-table-cell > div {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 100%;
+}
+
+/* For cells that need to show multiple lines */
+.motor-table-cell.multiline,
+.product-file-table-cell.multiline,
+.clients-table-cell.multiline,
+.policies-table-cell.multiline,
+.transactions-table-cell.multiline {
+  white-space: normal;
+  line-height: 1.4;
+}
+
+.motor-table-cell.multiline > div,
+.product-file-table-cell.multiline > div,
+.clients-table-cell.multiline > div,
+.policies-table-cell.multiline > div,
+.transactions-table-cell.multiline > div {
+  white-space: normal;
+  display: -webkit-box;
+  display: -moz-box;
+  display: box;
+  -webkit-line-clamp: 2;
+  -moz-line-clamp: 2;
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
+  -moz-box-orient: vertical;
+  box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Ensure action buttons don't cause overflow */
+.motor-actions,
+.product-file-actions,
+.clients-actions,
+.policies-actions,
+.transactions-actions {
+  flex-shrink: 0;
+  min-width: fit-content;
+}
+
+/* Fix for client names and other long text content */
+.client-name-cell,
+.product-name-cell,
+.policy-name-cell {
+  max-width: 200px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.client-name-cell:hover,
+.product-name-cell:hover,
+.policy-name-cell:hover {
+  white-space: normal;
+  word-wrap: break-word;
+  position: relative;
+  z-index: 10;
+  background: white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  padding: 0.5rem;
+  border-radius: 0.25rem;
+}
+
+/* Horizontal scroll indicators */
+.scroll-indicator {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 50px;
+  height: 30px;
+  background: linear-gradient(90deg, transparent 0%, rgba(59, 130, 246, 0.1) 100%);
+  pointer-events: none;
+  border-radius: 0 0 0.75rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.scroll-indicator::after {
+  content: '→';
+  color: #3b82f6;
+  font-size: 0.875rem;
+  font-weight: bold;
+}
+
+*[class*="table-wrapper"]:hover .scroll-indicator {
+  opacity: 1;
+}
+
+/* Enhanced table container for better scroll experience */
+.scrollable-table-container {
+  position: relative;
+  overflow: hidden;
+  border-radius: 0.75rem;
+}
+
+.scrollable-table-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #3b82f6 0%, transparent 100%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 30;
+}
+
+.scrollable-table-container.scrolling::before {
+  opacity: 1;
+}
+
+/* Mobile-specific scroll improvements */
+@media (max-width: 768px) {
+  .scrollable-table-container {
+    touch-action: pan-x pan-y;
+  }
+  
+  *[class*="table-wrapper"] {
+    scroll-behavior: smooth;
+  }
+}
+
+/* Add visual feedback for scrollable content */
+*[class*="table-wrapper"][data-scrollable="true"] {
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.05);
+}
+
+/* Sticky first column for better mobile experience */
+@media (max-width: 768px) {
+  *[class*="table"] th:first-child,
+  *[class*="table"] td:first-child {
+    position: sticky;
+    left: 0;
+    z-index: 15;
+    background: white;
+    box-shadow: 2px 0 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  *[class*="table"] th:first-child {
+    z-index: 30;
+  }
+}
