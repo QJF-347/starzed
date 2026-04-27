@@ -124,7 +124,7 @@ const Premium = () => {
       setTimeout(() => setCopiedToClipboard(false), 3000);
     } catch (error) {
       toast.error('Failed to copy link to clipboard');
-    }
+    } 
   };
 
   const getStatusColor = (status) => {
